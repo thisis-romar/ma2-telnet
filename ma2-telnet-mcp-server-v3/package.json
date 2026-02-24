@@ -2,6 +2,8 @@
   "name": "ma2-telnet-mcp-server",
   "version": "3.0.0",
   "description": "MA2 Telnet MCP server with structured List output parsing",
+  "license": "Apache-2.0",
+  "author": "Emblem Projects Inc.",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",

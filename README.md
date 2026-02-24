@@ -6,7 +6,7 @@
 ![Node.js](https://img.shields.io/badge/Node.js-20+-339933?logo=nodedotjs&logoColor=white)
 ![MCP SDK](https://img.shields.io/badge/MCP_SDK-1.27-blueviolet)
 ![grandMA2](https://img.shields.io/badge/grandMA2-onPC_3.9-FFD700?logoColor=black)
-![License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/badge/license-Apache_2.0-blue)
 
 ---
 
