@@ -5,10 +5,15 @@
   "license": "Apache-2.0",
   "author": "Emblem Projects Inc.",
   "main": "dist/index.js",
+  "bin": {
+    "ma2-mcp": "dist/server.js",
+    "ma2-repl": "dist/cli.js"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "server": "node dist/server.js"
+    "server": "node dist/server.js",
+    "repl": "node dist/cli.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0"
@@ -17,4 +22,5 @@
     "typescript": "^5.1.6",
     "@types/node": "^20.10.5"
   }
+  // Documentation and test setup will be added in AGENTS.md and test files.
 }
