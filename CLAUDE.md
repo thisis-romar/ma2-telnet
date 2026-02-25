@@ -2,6 +2,65 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+
+## Sequential Workflow: Terminal-Based Usage & Confirmation
+
+### 1. Build and Start the MCP Server
+
+```bash
+cd ma2-telnet-mcp-server-v3
+npm install
+npm run build
+npm run server  # or: node dist/server.js --repl
+```
+
+### 2. Register the MCP Server (Claude Code)
+
+```bash
+claude mcp add ma2-telnet node "C:/Users/romar/MA2-Telnet/ma2-telnet-mcp-server-v3/dist/server.js"
+```
+
+### 3. Send Batch Commands via JSON Payload
+
+Prepare a payload file (e.g., `add_and_patch_dimmer_payload.json`):
+
+```json
+{
+	"tool": "ma2_exec_batch",
+	"args": {
+		"commands": [
+			"Fixture 1 Thru 10 Type Dimmer",
+			"Assign DMX 1.1 Thru 1.10 At Fixture 1 Thru 10"
+		]
+	}
+}
+```
+
+Send it to the MCP server:
+
+```powershell
+type ma2-telnet-mcp-server-v3\add_and_patch_dimmer_payload.json | node ma2-telnet-mcp-server-v3/dist/server.js
+```
+
+### 4. Confirm Execution (REPL Mode)
+
+Start the server in REPL mode:
+
+```bash
+node ma2-telnet-mcp-server-v3/dist/server.js --repl
+```
+Type a command (e.g., `List Fixture`) and check the output.
+
+---
+
+## Troubleshooting
+- If you see no output, check environment variables and console connectivity.
+- Use `print_env.js` to verify your environment.
+- Ensure the grandMA2 console is running and reachable.
+- For JSON payloads, always use single quotes or a file to avoid PowerShell parsing errors.
+
+---
+
 ## Project
 
 `ma2-telnet-mcp-server-v3` is a TypeScript library that exposes a grandMA2 lighting console's telnet CLI as callable functions intended to be registered as MCP (Model Context Protocol) tools. All source lives under `ma2-telnet-mcp-server-v3/`.
@@ -50,13 +109,6 @@ Exports the functions meant to be registered as MCP tools: `exec`, `execBatch`, 
 Manages a persistent TCP socket to the console. Commands are queued and executed **serially**.
 
 **grandMA2 telnet protocol (observed from onPC 3.9.61):**
-- Commands must be terminated with **`\r\n`** (CRLF). `\n` alone is silently ignored.
-- Every response — including the login response — ends with the **command prompt**: `\r [<LayerName>]>` (e.g. `\r [Fixture]>`), optionally followed by ANSI erase codes. This prompt is the sole response terminator; there is no `OK` line.
-- Response lines use `\n\r` as their line separator (reversed from standard).
-- The console **ANSI-colours** all output (`\x1b[31m` for errors, `\x1b[32m` for command names, etc.). All escape sequences are stripped before parsing.
-- On connect the console sends a multi-part banner: the MA2 logo, an auto-login as `guest`, the first prompt, then a "Please login!" advisory, then a **second prompt**. The login command must be sent only after the **last** prompt in this burst (scanning for all occurrences of the prompt pattern and acting on the final one).
-- Login is sent automatically as `login <user> <password>\r\n` and confirmed by `Logged in as User '<name>'` in the response before the next prompt.
-- Every command response begins with an `Executing : <CommandName>` echo line which is stripped from returned output.
 - Errors appear as `Error : <cmd>` (coloured red) followed by `Error #<N>: <message>` on the next line, before the prompt. Detected via `/^Error #\d+:/m`.
 - When a pool is empty, `List` commands return a single `WARNING, NO OBJECTS FOUND FOR LIST` advisory (not an error). The parser returns `{ header: [], items: [] }` for this case.
 
@@ -69,13 +121,8 @@ Manages a persistent TCP socket to the console. Commands are queued and executed
 
 ### `src/parser.ts` — `parseListOutput`
 Parses grandMA2 `List` command output (a header row + data rows) into a `ListParseResult`:
-- `type`: the `MA2ObjectType` extracted from the command (lowercased first token after `List`); falls back to `'destination'` for unknown types.
-- `header`: column names from the first non-empty line.
-- `items`: array of `Record<string, string | null>` — each row mapped to its header keys. Extra columns beyond the header are stored under numeric string keys.
-- If the first non-empty line matches `/NO OBJECTS FOUND/i` (the console's empty-pool advisory), returns `{ header: [], items: [] }` immediately.
 
 Column splitting handles double-quoted strings as single tokens.
-
 ### `src/objectTypes.ts` — `MA2ObjectType`
 TypeScript string literal union and runtime array (`MA2_OBJECT_TYPES`) of all grandMA2 noun keywords (e.g. `'cue'`, `'group'`, `'fixture'`). Used by the parser to validate list types.
 

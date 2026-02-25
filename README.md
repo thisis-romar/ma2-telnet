@@ -34,6 +34,17 @@ The server handles the full telnet handshake — initial banner, dual-prompt seq
 
 ---
 
+
+
+## Interface Options
+
+| Interface         | Usage                        | Features                                  |
+|-------------------|-----------------------------|-------------------------------------------|
+| MCP stdio server  | Claude, Cursor, MCP agents  | Structured JSON commands, tool registration|
+| CLI REPL          | `ma2-repl`, `npm run repl`  | Interactive command input, meta-commands   |
+| Node.js API       | Custom scripts via index.ts | Programmatic automation, batch ops         |
+| Direct telnet     | Raw telnet client            | Manual testing (not recommended for automation) |
+
 ## Tools
 
 | Tool | Description |
@@ -42,6 +53,60 @@ The server handles the full telnet handshake — initial banner, dual-prompt seq
 | `ma2_exec_batch` | Execute multiple commands in sequence and return all results in order. Aborts on the first error. |
 | `ma2_status` | Check whether the TCP connection to the console is established. |
 | `ma2_list_objects` | Run `List <type> [args]` and return a typed, structured table of objects. |
+
+## Interactive CLI
+
+`ma2-repl` provides a human-facing REPL for direct MA2 command input and meta-commands:
+
+### Usage
+
+```
+npm run repl
+# or
+ma2-repl
+```
+
+
+### CLI Meta-Commands
+- `<MA2 command>`: Send command to console
+- `:status`: Show connection status
+- `:close`: Close connection
+- `:batch <cmds>`: Run multiple commands (comma separated)
+- `:list <type> [args]`: List objects of type
+- `:help`: Show help
+- `:exit`: Exit CLI
+
+#### Example Usage
+```
+ma2-repl
+MA2> Fixture 1 thru
+MA2> :status
+MA2> :batch Version, List World
+MA2> :list fixture
+MA2> :exit
+```
+
+### Troubleshooting
+- If you see empty output, check environment variables and console connection.
+- Use `print_env.js` to verify MA2_HOST, MA2_PORT, MA2_USERNAME, MA2_PASSWORD.
+- Confirm grandMA2 console is running and reachable on the specified port.
+- Review logs in CLI, terminal, and console for errors or feedback.
+
+### Logging
+- Set `MA2_LOG_LEVEL` to 'info', 'debug', or 'error' for CLI logging control.
+- Credentials and sensitive info are redacted in logs.
+
+### Testing
+- Run `test_parser.js` for parser normalization.
+- Run `test_connection.js` for connection state machine.
+
+### Packaging
+- `package.json` exposes two binaries:
+  - `ma2-mcp`: MCP server
+  - `ma2-repl`: Interactive CLI
+
+---
+For further details, see AGENTS.md and CLAUDE.md.
 
 ### `ma2_exec`
 
@@ -89,6 +154,56 @@ The server handles the full telnet handshake — initial banner, dual-prompt seq
 ```
 
 Supported `type` values include: `cue`, `sequence`, `group`, `fixture`, `fixturetype`, `macro`, `preset`, `effect`, `executor`, `page`, `world`, `filter`, `layout`, `view`, `user` and [many more](ma2-telnet-mcp-server-v3/src/objectTypes.ts).
+
+---
+
+## Quickstart: Sequential Workflow with Terminal Tools
+
+### 1. Build and Start the MCP Server
+
+```bash
+cd ma2-telnet-mcp-server-v3
+npm install
+npm run build
+npm run server  # or: node dist/server.js --repl
+```
+
+### 2. Register the MCP Server (Claude Code)
+
+```bash
+claude mcp add ma2-telnet node "C:/Users/romar/MA2-Telnet/ma2-telnet-mcp-server-v3/dist/server.js"
+```
+
+### 3. Send Commands via Terminal (Batch Example)
+
+Create a payload file (e.g., add_and_patch_dimmer_payload.json):
+
+```json
+{
+  "tool": "ma2_exec_batch",
+  "args": {
+    "commands": [
+      "Fixture 1 Thru 10 Type Dimmer",
+      "Assign DMX 1.1 Thru 1.10 At Fixture 1 Thru 10"
+    ]
+  }
+}
+```
+
+Send it to the MCP server:
+
+```powershell
+type ma2-telnet-mcp-server-v3\add_and_patch_dimmer_payload.json | node ma2-telnet-mcp-server-v3/dist/server.js
+```
+
+### 4. Confirm Execution
+
+For confirmation, run the server in REPL mode:
+
+```bash
+node ma2-telnet-mcp-server-v3/dist/server.js --repl
+```
+Type a command (e.g., `List Fixture`) and check the output.
 
 ---
 
