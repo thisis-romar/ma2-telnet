@@ -113,30 +113,28 @@ function splitColumns(line: string): string[] {
   const result: string[] = [];
   let current = '';
   let inQuotes = false;
+  let prevWasSpace = false;
   for (let i = 0; i < line.length; i++) {
     const char = line[i];
     if (char === '"') {
       inQuotes = !inQuotes;
       current += char;
+      prevWasSpace = false;
     } else if (!inQuotes && /\s/.test(char)) {
-      // When encountering whitespace outside of quotes, terminate the
-      // current token (if any) and skip consecutive whitespace.  Use
-      // character lookahead to detect empty fields.
-      if (current.length > 0 || (result.length > 0 && result[result.length - 1] !== '')) {
-        result.push(current);
-        current = '';
-      } else if (current.length === 0) {
-        // Two separators in a row means an empty field.
-        result.push('');
+      if (!prevWasSpace) {
+        if (current.length > 0) {
+          result.push(current);
+          current = '';
+        }
+        prevWasSpace = true;
       }
-      // Skip additional whitespace by continuing the loop.
+      // Ignore consecutive whitespace
     } else {
       current += char;
+      prevWasSpace = false;
     }
   }
-  // Append the final token if present.  If the line ended with a
-  // separator, record an empty field.
-  if (current.length > 0 || line.match(/\s$/)) {
+  if (current.length > 0) {
     result.push(current);
   }
   return result;

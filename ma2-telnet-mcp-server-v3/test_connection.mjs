@@ -1,15 +1,14 @@
-// test_connection.js
-import { MA2Connection } from './src/ma2Connection.js';
+// test_connection.mjs
+import { MA2Connection } from './dist/ma2Connection.js';
 
 async function testConnection() {
   // Test normal connection
   const conn = new MA2Connection();
   try {
-    await conn.openSocket();
-    await conn.performLogin();
-    const status = await conn.getStatus();
+    await conn.connect();
+    const status = await conn.sendCommand('status');
     console.log('Connection status:', status);
-    await conn.close();
+    conn.close();
     console.log('Connection test passed.');
   } catch (err) {
     console.error('Connection test failed:', err instanceof Error ? err.message : String(err));
@@ -20,8 +19,8 @@ async function testConnection() {
   badConn.username = 'wronguser';
   badConn.password = 'wrongpass';
   try {
-    await badConn.openSocket();
-    await badConn.performLogin();
+    await badConn.connect();
+    await badConn.sendCommand('status');
     console.error('Login failure test failed: should not succeed');
   } catch (err) {
     console.log('Login failure test passed:', err instanceof Error ? err.message : String(err));
@@ -32,13 +31,12 @@ async function testConnection() {
   // Test reconnection
   const conn2 = new MA2Connection();
   try {
-    await conn2.openSocket();
-    await conn2.performLogin();
-    await conn2.close();
-    await conn2.openSocket();
-    await conn2.performLogin();
-    console.log('Reconnection test passed.');
-    await conn2.close();
+    await conn2.connect();
+    conn2.close();
+    await conn2.connect();
+    const status2 = await conn2.sendCommand('status');
+    console.log('Reconnection test passed.', status2);
+    conn2.close();
   } catch (err) {
     console.error('Reconnection test failed:', err instanceof Error ? err.message : String(err));
     conn2.close();

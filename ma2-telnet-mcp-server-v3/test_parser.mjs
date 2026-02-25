@@ -1,5 +1,5 @@
-// test_parser.js
-import { parseListOutput } from './src/parser.js';
+// test_parser.mjs
+import { parseListOutput } from './dist/parser.js';
 
 const tests = [
   {
@@ -48,7 +48,8 @@ const tests = [
 
 let allPassed = true;
 for (const t of tests) {
-  const result = parseListOutput(t.input, t.type);
+  const lines = t.input.split(/\r?\n/).filter(l => l.length > 0);
+  const result = parseListOutput(t.input.split("\n")[0], lines.slice(1));
   const pass =
     result.items.length === t.expectedItems &&
     JSON.stringify(result.header) === JSON.stringify(t.expectedHeader);

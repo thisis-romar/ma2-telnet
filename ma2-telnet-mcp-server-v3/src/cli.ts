@@ -1,7 +1,8 @@
 import readline from 'readline';
+import chalk from 'chalk';
 import { exec, status, close, execBatch, listObjects } from './index.js';
 
-// Simple log utility
+// Enhanced log utility with color
 const LOG_LEVEL = process.env.MA2_LOG_LEVEL || 'info';
 function log(level: 'error' | 'info' | 'debug', msg: string) {
   if (['error', 'info', 'debug'].indexOf(level) === -1) return;
@@ -9,7 +10,18 @@ function log(level: 'error' | 'info' | 'debug', msg: string) {
   if (level === 'info' && LOG_LEVEL === 'error') return;
   // Redact credentials
   msg = msg.replace(/(admin|administrator|password|MA2_PASSWORD|MA2_USERNAME)\s*[:=]\s*\S+/gi, '[REDACTED]');
-  console[level === 'error' ? 'error' : 'log'](`[${level.toUpperCase()}] ${msg}`);
+  let prefix = `[${level.toUpperCase()}]`;
+  let colored;
+  if (level === 'error') {
+    colored = chalk.red.bold(prefix) + ' ' + chalk.red(msg);
+  } else if (level === 'info') {
+    colored = chalk.blue(prefix) + ' ' + msg;
+  } else if (level === 'debug') {
+    colored = chalk.gray(prefix) + ' ' + msg;
+  } else {
+    colored = prefix + ' ' + msg;
+  }
+  console[level === 'error' ? 'error' : 'log'](colored);
 }
 
 async function main() {
@@ -19,7 +31,7 @@ async function main() {
     prompt: 'MA2> '
   });
 
-  log('info', 'Welcome to MA2 Interactive CLI. Type :help for commands.');
+  log('info', chalk.green('Welcome to MA2 Interactive CLI. Type :help for commands.'));
   rl.prompt();
 
   rl.on('line', async (line) => {
@@ -32,19 +44,19 @@ async function main() {
       if (cmd.startsWith(':')) {
         // Meta-commands
         if (cmd === ':help') {
-          log('info', 'Commands:');
-          log('info', '  <MA2 command>        Send command to console');
-          log('info', '  :status              Show connection status');
-          log('info', '  :close               Close connection');
-          log('info', '  :batch <cmds>        Run multiple commands (comma separated)');
-          log('info', '  :list <type> [args]  List objects of type');
-          log('info', '  :exit                Exit CLI');
+          log('info', chalk.yellow('Commands:'));
+          log('info', chalk.white('  <MA2 command>        Send command to console'));
+          log('info', chalk.white('  :status              Show connection status'));
+          log('info', chalk.white('  :close               Close connection'));
+          log('info', chalk.white('  :batch <cmds>        Run multiple commands (comma separated)'));
+          log('info', chalk.white('  :list <type> [args]  List objects of type'));
+          log('info', chalk.white('  :exit                Exit CLI'));
         } else if (cmd === ':status') {
           const s = await status();
           log('info', JSON.stringify(s, null, 2));
         } else if (cmd === ':close') {
           await close();
-          log('info', 'Connection closed.');
+          log('info', chalk.magenta('Connection closed.'));
         } else if (cmd.startsWith(':batch ')) {
           const cmds = cmd.slice(7).split(',').map(s => s.trim()).filter(Boolean);
           const res = await execBatch(cmds);
@@ -56,7 +68,7 @@ async function main() {
         } else if (cmd === ':exit') {
           rl.close();
         } else {
-          log('error', 'Unknown meta-command. Type :help for list.');
+          log('error', chalk.red('Unknown meta-command. Type :help for list.'));
         }
       } else {
         // MA2 command
@@ -64,18 +76,18 @@ async function main() {
         log('info', JSON.stringify(result, null, 2));
       }
     } catch (err) {
-      log('error', err instanceof Error ? err.message : String(err));
+      log('error', chalk.red(err instanceof Error ? err.message : String(err)));
     }
     rl.prompt();
   });
 
   rl.on('close', () => {
-    log('info', 'Exiting MA2 CLI.');
+    log('info', chalk.green('Exiting MA2 CLI.'));
     process.exit(0);
   });
 }
 
 main().catch((err) => {
-  log('error', 'Fatal: ' + (err instanceof Error ? err.message : String(err)));
+  log('error', chalk.red('Fatal: ' + (err instanceof Error ? err.message : String(err))));
   process.exit(1);
 });

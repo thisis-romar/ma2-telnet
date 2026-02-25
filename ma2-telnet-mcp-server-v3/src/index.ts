@@ -34,43 +34,47 @@ export async function exec(command: string): Promise<{ lines?: string[]; parsed?
  * result includes either a `parsed` property (for `List` commands) or
  * a `lines` property with the raw output.
  */
-export async function execBatch(commands: string[]): Promise<Array<{ lines?: string[]; parsed?: ListParseResult }>> {
-  const results: Array<{ lines?: string[]; parsed?: ListParseResult }> = [];
+export async function execBatch(commands: string[]): Promise<Array<{ lines?: string[]; parsed?: ListParseResult; error?: string }>> {
+  const results: Array<{ lines?: string[]; parsed?: ListParseResult; error?: string }> = [];
   for (const cmd of commands) {
-    const { raw, parsed } = await connection.sendCommand(cmd);
-    if (parsed) {
-      results.push({ parsed });
-    } else {
-      results.push({ lines: raw });
+    try {
+      const { raw, parsed } = await connection.sendCommand(cmd);
+      if (parsed) {
+        results.push({ parsed });
+      } else {
+        results.push({ lines: raw });
+      }
+    } catch (err) {
+      results.push({ error: err instanceof Error ? err.message : String(err) });
     }
   }
   return results;
 }
 
-/**
- * Return a basic connection status.  This function executes a no‑op
- * command ("") to probe the connection.  If a connection is not
- * currently established, it will be created.  The result is an
- * object containing a boolean `connected` flag.  Note that this
- * function does not send a `List` command and therefore never
- * includes a `parsed` property.
- */
 export async function status(): Promise<{ connected: boolean }> {
   try {
     await connection.connect();
+    // Validate env values
+    const port = Number(connection['port']);
+    if (!Number.isInteger(port) || port <= 0 || port > 65535) {
+      throw new Error('Invalid MA2_PORT environment variable');
+    }
+    if (!connection['host'] || typeof connection['host'] !== 'string') {
+      throw new Error('Invalid MA2_HOST environment variable');
+    }
+    if (!connection['username'] || typeof connection['username'] !== 'string') {
+      throw new Error('Invalid MA2_USERNAME environment variable');
+    }
+    if (!connection['password'] || typeof connection['password'] !== 'string') {
+      throw new Error('Invalid MA2_PASSWORD environment variable');
+    }
+    if (!connection['socket'] || connection['socket'].destroyed) {
+      throw new Error('Connection is closed');
+    }
     return { connected: true };
-  } catch {
-    return { connected: false };
+  } catch (err) {
+    throw err;
   }
-}
-
-/**
- * Close the connection to the console.  Pending commands will be
- * rejected.  Subsequent calls to `exec` or `execBatch` will
- * transparently reconnect.
- */
-export function close() {
-  connection.close();
 }
 
 export { parseListOutput };
@@ -114,4 +118,8 @@ export async function listObjects(type: MA2ObjectType, args?: string): Promise<L
     throw new Error(`No parsed result for command: ${cmd}`);
   }
   return parsed;
+}
+
+export function close() {
+  connection.close();
 }
