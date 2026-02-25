@@ -1,0 +1,105 @@
+# grandMA2 List Commands
+
+## Extracted List Commands
+- `List`
+  - Context: List Key
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_key_list.html](https://help.malighting.com/grandMA2/en/help/key_key_list.html)
+- `List feature`
+  - Context: Feature Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_feature.html](https://help.malighting.com/grandMA2/en/help/key_keyword_feature.html)
+- `List /?`
+  - Context: List Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_list.html](https://help.malighting.com/grandMA2/en/help/key_keyword_list.html)
+- `List Cue`
+  - Context: List Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_list.html](https://help.malighting.com/grandMA2/en/help/key_keyword_list.html)
+- `List Group Thru 10`
+  - Context: List Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_list.html](https://help.malighting.com/grandMA2/en/help/key_keyword_list.html)
+- `List Attribute`
+  - Context: List Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_list.html](https://help.malighting.com/grandMA2/en/help/key_keyword_list.html)
+- `List Preset "color"."m*"`
+  - Context: List Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_list.html](https://help.malighting.com/grandMA2/en/help/key_keyword_list.html)
+- `List Preset 4. "m*"`
+  - Context: List Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_list.html](https://help.malighting.com/grandMA2/en/help/key_keyword_list.html)
+- `ListEffectLibrary "My*"`
+  - Context: ListEffectLibrary Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_listeffectlibrary.html](https://help.malighting.com/grandMA2/en/help/key_keyword_listeffectlibrary.html)
+- `ListFaderModules`
+  - Context: ListFaderModules Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_listfadermodules.html](https://help.malighting.com/grandMA2/en/help/key_keyword_listfadermodules.html)
+- `ListLibrary "Martin*"`
+  - Context: ListLibrary Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_listlibrary.html](https://help.malighting.com/grandMA2/en/help/key_keyword_listlibrary.html)
+- `ListMacroLibrary "My*"`
+  - Context: ListMacroLibrary Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_listmacrolibrary.html](https://help.malighting.com/grandMA2/en/help/key_keyword_listmacrolibrary.html)
+- `ListOops`
+  - Context: ListOops Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_listoops.html](https://help.malighting.com/grandMA2/en/help/key_keyword_listoops.html)
+- `ListOwner`
+  - Context: ListOwner Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_listowner.html](https://help.malighting.com/grandMA2/en/help/key_keyword_listowner.html)
+- `ListPluginLibrary "My*"`
+  - Context: ListPluginLibrary Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_listpluginlibrary.html](https://help.malighting.com/grandMA2/en/help/key_keyword_listpluginlibrary.html)
+- `ListShows`
+  - Context: ListShows Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_listshows.html](https://help.malighting.com/grandMA2/en/help/key_keyword_listshows.html)
+- `ListShows f*`
+  - Context: ListShows Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_listshows.html](https://help.malighting.com/grandMA2/en/help/key_keyword_listshows.html)
+- `ListUpdate`
+  - Context: ListUpdate Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_listupdate.html](https://help.malighting.com/grandMA2/en/help/key_keyword_listupdate.html)
+- `ListUserVar`
+  - Context: ListUserVar Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_listuservar.html](https://help.malighting.com/grandMA2/en/help/key_keyword_listuservar.html)
+- `ListUserVar f*`
+  - Context: ListUserVar Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_listuservar.html](https://help.malighting.com/grandMA2/en/help/key_keyword_listuservar.html)
+- `ListVar`
+  - Context: ListVar Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_listvar.html](https://help.malighting.com/grandMA2/en/help/key_keyword_listvar.html)
+- `ListVar f*`
+  - Context: ListVar Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_listvar.html](https://help.malighting.com/grandMA2/en/help/key_keyword_listvar.html)
+- `List MediaServer Thru`
+  - Context: MediaServer keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_mediaserver.html](https://help.malighting.com/grandMA2/en/help/key_keyword_mediaserver.html)
+- `Menu /list`
+  - Context: Menu Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_menu.html](https://help.malighting.com/grandMA2/en/help/key_keyword_menu.html)
+- `List Messages /cnd = "type = 'alert'"`
+  - Context: Messages Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_messages.html](https://help.malighting.com/grandMA2/en/help/key_keyword_messages.html)
+- `List Model`
+  - Context: Model Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_model.html](https://help.malighting.com/grandMA2/en/help/key_keyword_model.html)
+- `List User 1`
+  - Context: User Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_user.html](https://help.malighting.com/grandMA2/en/help/key_keyword_user.html)
+- `List User`
+  - Context: User Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_user.html](https://help.malighting.com/grandMA2/en/help/key_keyword_user.html)
+- `List UserProfile`
+  - Context: UserProfile Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_userprofile.html](https://help.malighting.com/grandMA2/en/help/key_keyword_userprofile.html)
+- `List UserProfile 1`
+  - Context: UserProfile Keyword
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_keyword_userprofile.html](https://help.malighting.com/grandMA2/en/help/key_keyword_userprofile.html)
+- `Assign [DMX-list] At Fixture [Fixture ID]`
+  - Context: Multipatching
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_patch_multipatch.html](https://help.malighting.com/grandMA2/en/help/key_patch_multipatch.html)
+- `Assign Fixture [Fixture-list] At DMX [DMX-address]`
+  - Context: Live patching
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_patch_livepatch.html](https://help.malighting.com/grandMA2/en/help/key_patch_livepatch.html)
+- `List Attribute`
+  - Context: Replace
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_search_replace_replace.html](https://help.malighting.com/grandMA2/en/help/key_search_replace_replace.html)
+- `ListVar`
+  - Context: Use variables in macros
+  - Source: [https://help.malighting.com/grandMA2/en/help/key_macro_create_variables.html](https://help.malighting.com/grandMA2/en/help/key_macro_create_variables.html)
