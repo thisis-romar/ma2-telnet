@@ -3,7 +3,7 @@ import { exec, status, close, execBatch, listObjects } from './index.js';
 
 // Simple log utility
 const LOG_LEVEL = process.env.MA2_LOG_LEVEL || 'info';
-function log(level, msg) {
+function log(level: 'error' | 'info' | 'debug', msg: string) {
   if (['error', 'info', 'debug'].indexOf(level) === -1) return;
   if (level === 'debug' && LOG_LEVEL !== 'debug') return;
   if (level === 'info' && LOG_LEVEL === 'error') return;
@@ -51,7 +51,7 @@ async function main() {
           log('info', JSON.stringify(res, null, 2));
         } else if (cmd.startsWith(':list ')) {
           const [type, ...args] = cmd.slice(6).split(' ');
-          const res = await listObjects(type, args.join(' '));
+          const res = await listObjects(type as any, args.join(' '));
           log('info', JSON.stringify(res, null, 2));
         } else if (cmd === ':exit') {
           rl.close();

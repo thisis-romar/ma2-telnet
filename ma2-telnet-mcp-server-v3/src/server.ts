@@ -2,6 +2,7 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
 import { exec, execBatch, status, listObjects } from './index.js';
+import readline from 'readline';
 import { MA2_OBJECT_TYPES } from './objectTypes.js';
 
 const server = new McpServer({
@@ -74,9 +75,40 @@ server.registerTool(
   }
 );
 
+
+async function startRepl() {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+    prompt: 'MA2> '
+  });
+  rl.prompt();
+  rl.on('line', async (line) => {
+    const cmd = line.trim();
+    if (!cmd) {
+      rl.prompt();
+      return;
+    }
+    try {
+      const result = await exec(cmd);
+      process.stdout.write(JSON.stringify(result, null, 2) + '\n');
+    } catch (err) {
+      process.stderr.write(`Error: ${err instanceof Error ? err.message : String(err)}\n`);
+    }
+    rl.prompt();
+  });
+  rl.on('close', () => {
+    process.stdout.write('Exiting REPL.\n');
+    process.exit(0);
+  });
+}
+
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
+  if (process.argv.includes('--repl')) {
+    await startRepl();
+  }
 }
 
 main().catch((err) => {

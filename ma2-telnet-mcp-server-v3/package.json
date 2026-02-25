@@ -22,5 +22,5 @@
     "typescript": "^5.1.6",
     "@types/node": "^20.10.5"
   }
-  // Documentation and test setup will be added in AGENTS.md and test files.
+  
 }
