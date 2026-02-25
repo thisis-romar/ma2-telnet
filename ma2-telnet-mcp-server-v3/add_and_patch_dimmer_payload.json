@@ -1,0 +1,9 @@
+{
+  "tool": "ma2_exec_batch",
+  "args": {
+    "commands": [
+      "Fixture 1 Thru 10 Type Dimmer",
+      "Assign DMX 1.1 Thru 1.10 At Fixture 1 Thru 10"
+    ]
+  }
+}
