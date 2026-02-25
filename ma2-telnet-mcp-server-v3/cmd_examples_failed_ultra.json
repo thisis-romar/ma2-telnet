@@ -1,0 +1,47 @@
+[
+  {
+    "command": ">>>",
+    "context": ">>> [GoFastForward] Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_skipplus.html"
+  },
+  {
+    "command": "<<<",
+    "context": "<<<  [GoFastBack] Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_skipminus.html"
+  },
+  {
+    "command": ".",
+    "context": ". [Dot] Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_dot.html"
+  },
+  {
+    "command": "-",
+    "context": "[Minus] - Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_minus.html"
+  },
+  {
+    "command": "+",
+    "context": "[Plus] + Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_plus.html"
+  },
+  {
+    "command": "AlignFaderModule",
+    "context": "AlignFaderModules keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_alignfadermodules.html"
+  },
+  {
+    "command": "Flash On Executor 1",
+    "context": "Flash Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_flash.html"
+  },
+  {
+    "command": "Flash Off Executor 1",
+    "context": "Flash Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_flash.html"
+  },
+  {
+    "command": "Shutdown \"IP Address\"",
+    "context": "Shut Down the System",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_shut_down_the_system.html"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "command": "ChangeDest Root DMX_Protocols.Art-Net",
+    "context": "Root Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_root.html",
+    "valid": true,
+    "ambiguous": false,
+    "webMention": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "CD Fixture 1",
+    "context": "Channel Pages",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_adv_exec_ch_pages.html",
+    "valid": true,
+    "ambiguous": false,
+    "webMention": false,
+    "notes": "Valid"
+  }
+]

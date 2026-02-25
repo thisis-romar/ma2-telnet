@@ -1,0 +1,552 @@
+[
+  {
+    "command": ">>>",
+    "context": ">>> [GoFastForward] Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_skipplus.html"
+  },
+  {
+    "command": "<<<",
+    "context": "<<<  [GoFastBack] Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_skipminus.html"
+  },
+  {
+    "command": "Assign",
+    "context": "Assign Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_assign.html"
+  },
+  {
+    "command": ".",
+    "context": ". [Dot] Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_dot.html"
+  },
+  {
+    "command": "At",
+    "context": "At Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_at.html"
+  },
+  {
+    "command": "Channel",
+    "context": "Channel Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_channel.html"
+  },
+  {
+    "command": "Copy",
+    "context": "Copy Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_copy.html"
+  },
+  {
+    "command": "Cue",
+    "context": "Cue Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_cue.html"
+  },
+  {
+    "command": "Delete",
+    "context": "Del (Delete) Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_delete.html"
+  },
+  {
+    "command": "Effect",
+    "context": "Effect Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_effect.html"
+  },
+  {
+    "command": "Fixture",
+    "context": "Fixture Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_fixture.html"
+  },
+  {
+    "command": "Fix",
+    "context": "Fix Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_fix.html"
+  },
+  {
+    "command": "Go",
+    "context": "Go + Key (small)",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_goplus.html"
+  },
+  {
+    "command": "Goto",
+    "context": "Goto Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_goto.html"
+  },
+  {
+    "command": "Group",
+    "context": "Group Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_group.html"
+  },
+  {
+    "command": "Help",
+    "context": "Help Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_help.html"
+  },
+  {
+    "command": "If",
+    "context": "If Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_if.html"
+  },
+  {
+    "command": "Learn",
+    "context": "Learn Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_learn.html"
+  },
+  {
+    "command": "Macro",
+    "context": "Macro Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_macro.html"
+  },
+  {
+    "command": "List",
+    "context": "List Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_list.html"
+  },
+  {
+    "command": "-",
+    "context": "[Minus] - Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_minus.html"
+  },
+  {
+    "command": "Move",
+    "context": "Move Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_move.html"
+  },
+  {
+    "command": "Off",
+    "context": "Off Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_off.html"
+  },
+  {
+    "command": "Page",
+    "context": "Page Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_page.html"
+  },
+  {
+    "command": "On",
+    "context": "On Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_on.html"
+  },
+  {
+    "command": "+",
+    "context": "[Plus] + Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_plus.html"
+  },
+  {
+    "command": "Pause",
+    "context": "Pause (small) Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_pause.html"
+  },
+  {
+    "command": "Preset",
+    "context": "Preset Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_preset.html"
+  },
+  {
+    "command": "Preview",
+    "context": "Prvw (Preview) Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_preview.html"
+  },
+  {
+    "command": "Select",
+    "context": "Select Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_select.html"
+  },
+  {
+    "command": "Store",
+    "context": "Store Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_store.html"
+  },
+  {
+    "command": "Sequence",
+    "context": "Sequ (Sequence) Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_sequence.html"
+  },
+  {
+    "command": "Temp",
+    "context": "Temp Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_temp.html"
+  },
+  {
+    "command": "Top",
+    "context": "Top Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_top.html"
+  },
+  {
+    "command": "View",
+    "context": "View Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_view.html"
+  },
+  {
+    "command": "AlignFaderModule",
+    "context": "AlignFaderModules keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_alignfadermodules.html"
+  },
+  {
+    "command": "All",
+    "context": "All Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_all.html"
+  },
+  {
+    "command": "AllRows",
+    "context": "AllRows keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_allrows.html"
+  },
+  {
+    "command": "Backup",
+    "context": "Backup Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_backup.html"
+  },
+  {
+    "command": "BlackScreen",
+    "context": "BlackScreen keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_blackscreen.html"
+  },
+  {
+    "command": "DropControl",
+    "context": "DropControl keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_dropcontrol.html"
+  },
+  {
+    "command": "Down",
+    "context": "Down keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_down.html"
+  },
+  {
+    "command": "Edit",
+    "context": "Edit keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_edit.html"
+  },
+  {
+    "command": "EffectAttack",
+    "context": "EffectAttack Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_effectattack.html"
+  },
+  {
+    "command": "EffectBPM",
+    "context": "EffectBPM Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_effectbpm.html"
+  },
+  {
+    "command": "EffectDecay",
+    "context": "EffectDecay Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_effectdecay.html"
+  },
+  {
+    "command": "EffectDelay",
+    "context": "EffectDelay Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_effectdelay.html"
+  },
+  {
+    "command": "EffectFade",
+    "context": "EffectFade Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_effectfade.html"
+  },
+  {
+    "command": "EffectForm",
+    "context": "EffectForm Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_effectform.html"
+  },
+  {
+    "command": "EffectHigh",
+    "context": "EffectHigh Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_effecthigh.html"
+  },
+  {
+    "command": "EffectHZ",
+    "context": "EffectHZ Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_effecthz.html"
+  },
+  {
+    "command": "EffectID",
+    "context": "EffectID Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_effectid.html"
+  },
+  {
+    "command": "EffectLow",
+    "context": "EffectLow Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_effectlow.html"
+  },
+  {
+    "command": "EffectPhase",
+    "context": "EffectPhase Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_effectphase.html"
+  },
+  {
+    "command": "EffectSec",
+    "context": "EffectSec Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_effectsec.html"
+  },
+  {
+    "command": "EffectSpeedGroup",
+    "context": "EffectSpeedGroup keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_effectspeedgroup.html"
+  },
+  {
+    "command": "EffectWidth",
+    "context": "EffectWidth Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_effectwidth.html"
+  },
+  {
+    "command": "EndSession",
+    "context": "EndSession Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_endsession.html"
+  },
+  {
+    "command": "Exit",
+    "context": "Exit keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_exit.html"
+  },
+  {
+    "command": "Flash On Executor 1",
+    "context": "Flash Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_flash.html"
+  },
+  {
+    "command": "Flash Off Executor 1",
+    "context": "Flash Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_flash.html"
+  },
+  {
+    "command": "Flip",
+    "context": "Flip Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_flip.html"
+  },
+  {
+    "command": "Fullhighlight",
+    "context": "FullHighlight keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_fullhighlight.html"
+  },
+  {
+    "command": "Help",
+    "context": "Help Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_help.html"
+  },
+  {
+    "command": "IfActive",
+    "context": "IfActive Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_ifactive.html"
+  },
+  {
+    "command": "IfOutput",
+    "context": "IfOutput Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_ifoutput.html"
+  },
+  {
+    "command": "IfProg",
+    "context": "IfProg Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_ifprog.html"
+  },
+  {
+    "command": "LeaveSession",
+    "context": "LeaveSession Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_leavesession.html"
+  },
+  {
+    "command": "ListFaderModules",
+    "context": "ListFaderModules Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listfadermodules.html"
+  },
+  {
+    "command": "ListOops",
+    "context": "ListOops Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listoops.html"
+  },
+  {
+    "command": "ListOwner",
+    "context": "ListOwner Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listowner.html"
+  },
+  {
+    "command": "ListShows",
+    "context": "ListShows Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listshows.html"
+  },
+  {
+    "command": "ListUserVar",
+    "context": "ListUserVar Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listuservar.html"
+  },
+  {
+    "command": "ListUpdate",
+    "context": "ListUpdate Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listupdate.html"
+  },
+  {
+    "command": "ListVar",
+    "context": "ListVar Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listvar.html"
+  },
+  {
+    "command": "Logout",
+    "context": "Logout Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_logout.html"
+  },
+  {
+    "command": "NetworkInfo",
+    "context": "NetworkInfo Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_networkinfo.html"
+  },
+  {
+    "command": "NetworkNodeUpdate",
+    "context": "NetworkNodeUpdate Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_networknodeupdate.html"
+  },
+  {
+    "command": "NetworkNodeInfo",
+    "context": "NetworkNodeInfo Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_networknodeinfo.html"
+  },
+  {
+    "command": "NetworkSpeedTest",
+    "context": "NetworkSpeedTest Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_networkspeedtest.html"
+  },
+  {
+    "command": "NextRow",
+    "context": "NextRow Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_nextrow.html"
+  },
+  {
+    "command": "Oops",
+    "context": "Oops Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_oops.html"
+  },
+  {
+    "command": "Previous",
+    "context": "Previous Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_previous.html"
+  },
+  {
+    "command": "PrevRow",
+    "context": "PrevRow Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_prevrow.html"
+  },
+  {
+    "command": "RdmAutomatch",
+    "context": "RdmAutomatch Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_rdmautomatch.html"
+  },
+  {
+    "command": "RdmAutopatch",
+    "context": "RdmAutopatch Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_rdmautopatch.html"
+  },
+  {
+    "command": "RdmUnmatch",
+    "context": "RdmUnmatch Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_rdmunmatch.html"
+  },
+  {
+    "command": "Reboot",
+    "context": "Reboot Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_reboot.html"
+  },
+  {
+    "command": "ReloadPlugins",
+    "context": "ReloadPlugins Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_reloadplugins.html"
+  },
+  {
+    "command": "ResetDmxSelection",
+    "context": "ResetDmxSelection Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_resetdmxselection.html"
+  },
+  {
+    "command": "Restart",
+    "context": "Restart Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_restart.html"
+  },
+  {
+    "command": "SaveShow",
+    "context": "SaveShow Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_saveshow.html"
+  },
+  {
+    "command": "SearchResult",
+    "context": "SearchResult Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_searchresult.html"
+  },
+  {
+    "command": "SelectDrive",
+    "context": "SelectDrive Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_selectdrive.html"
+  },
+  {
+    "command": "SetIP",
+    "context": "SetIP Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_setip.html"
+  },
+  {
+    "command": "Setup",
+    "context": "Setup Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_setup.html"
+  },
+  {
+    "command": "ShuffleValues",
+    "context": "ShuffleValues Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_shufflevalues.html"
+  },
+  {
+    "command": "ShuffleSelection",
+    "context": "ShuffleSelection Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_shuffleselection.html"
+  },
+  {
+    "command": "Shutdown",
+    "context": "Shutdown Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_shutdown.html"
+  },
+  {
+    "command": "SyncEffects",
+    "context": "SyncEffects Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_synceffects.html"
+  },
+  {
+    "command": "Tools",
+    "context": "Tools Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_tools.html"
+  },
+  {
+    "command": "Unblock",
+    "context": "Unblock Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_unblock.html"
+  },
+  {
+    "command": "Up",
+    "context": "Up Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_up.html"
+  },
+  {
+    "command": "Update",
+    "context": "Update Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_update.html"
+  },
+  {
+    "command": "UpdateFirmware",
+    "context": "UpdateFirmware Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_updatefirmware.html"
+  },
+  {
+    "command": "Value",
+    "context": "Value Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_value.html"
+  },
+  {
+    "command": "Version",
+    "context": "Version Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_version.html"
+  },
+  {
+    "command": "WebRemoteProgOnly",
+    "context": "WebRemoteProgOnly Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_webremoteprogonly.html"
+  },
+  {
+    "command": "Zero",
+    "context": "Zero Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_zero.html"
+  },
+  {
+    "command": "Shutdown \"IP Address\"",
+    "context": "Shut Down the System",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_shut_down_the_system.html"
+  }
+]

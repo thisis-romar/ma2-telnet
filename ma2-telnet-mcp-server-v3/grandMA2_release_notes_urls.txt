@@ -1,0 +1,22 @@
+# grandMA2 Release Notes URLs (validated as of 2026-02-24)
+
+https://help.malighting.com/grandMA2/en/help/release_notes
+https://help.malighting.com/grandMA2/en/help/release_notes/key_releasenotes.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v3.9.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v3.8.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v3.7.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v3.6.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v3.5.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v3.4.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v3.3.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v2.9.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v2.8.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v2.7.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v2.6.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v2.5.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v2.4.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v2.3.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v2.2.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v2.1.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v2.0.html
+https://help.malighting.com/grandMA2/en/help/release_notes/v1.x.html

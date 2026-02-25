@@ -1,0 +1,274 @@
+[
+  {
+    "command": "List",
+    "context": "List Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_list.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "List feature",
+    "context": "Feature Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_feature.html",
+    "valid": true,
+    "ambiguous": true,
+    "notes": "Valid but context-specific/advanced"
+  },
+  {
+    "command": "List /?",
+    "context": "List Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_list.html",
+    "valid": false,
+    "ambiguous": false,
+    "notes": "Non-standard or ambiguous"
+  },
+  {
+    "command": "List Cue",
+    "context": "List Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_list.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "List Group Thru 10",
+    "context": "List Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_list.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "List Attribute",
+    "context": "List Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_list.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "List Preset \"color\".\"m*\"",
+    "context": "List Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_list.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "List Preset 4. \"m*\"",
+    "context": "List Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_list.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListEffectLibrary \"My*\"",
+    "context": "ListEffectLibrary Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listeffectlibrary.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListFaderModules",
+    "context": "ListFaderModules Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listfadermodules.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListLibrary \"Martin*\"",
+    "context": "ListLibrary Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listlibrary.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListMacroLibrary \"My*\"",
+    "context": "ListMacroLibrary Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listmacrolibrary.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListOops",
+    "context": "ListOops Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listoops.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListOwner",
+    "context": "ListOwner Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listowner.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListPluginLibrary \"My*\"",
+    "context": "ListPluginLibrary Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listpluginlibrary.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListShows",
+    "context": "ListShows Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listshows.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListShows f*",
+    "context": "ListShows Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listshows.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListUpdate",
+    "context": "ListUpdate Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listupdate.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListUserVar",
+    "context": "ListUserVar Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listuservar.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListUserVar f*",
+    "context": "ListUserVar Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listuservar.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListVar",
+    "context": "ListVar Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listvar.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListVar f*",
+    "context": "ListVar Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_listvar.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "List MediaServer Thru",
+    "context": "MediaServer keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_mediaserver.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "Menu /list",
+    "context": "Menu Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_menu.html",
+    "valid": false,
+    "ambiguous": true,
+    "notes": "Non-standard or ambiguous"
+  },
+  {
+    "command": "List Messages /cnd = \"type = 'alert'\"",
+    "context": "Messages Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_messages.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "List Model",
+    "context": "Model Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_model.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "List User 1",
+    "context": "User Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_user.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "List User",
+    "context": "User Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_user.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "List UserProfile",
+    "context": "UserProfile Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_userprofile.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "List UserProfile 1",
+    "context": "UserProfile Keyword",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_keyword_userprofile.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "Assign [DMX-list] At Fixture [Fixture ID]",
+    "context": "Multipatching",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_patch_multipatch.html",
+    "valid": false,
+    "ambiguous": false,
+    "notes": "Non-standard or ambiguous"
+  },
+  {
+    "command": "Assign Fixture [Fixture-list] At DMX [DMX-address]",
+    "context": "Live patching",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_patch_livepatch.html",
+    "valid": false,
+    "ambiguous": false,
+    "notes": "Non-standard or ambiguous"
+  },
+  {
+    "command": "List Attribute",
+    "context": "Replace",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_search_replace_replace.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  },
+  {
+    "command": "ListVar",
+    "context": "Use variables in macros",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_macro_create_variables.html",
+    "valid": true,
+    "ambiguous": false,
+    "notes": "Valid"
+  }
+]
