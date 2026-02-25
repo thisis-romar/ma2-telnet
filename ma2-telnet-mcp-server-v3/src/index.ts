@@ -68,8 +68,12 @@ export async function status(): Promise<{ connected: boolean }> {
     if (!connection['password'] || typeof connection['password'] !== 'string') {
       throw new Error('Invalid MA2_PASSWORD environment variable');
     }
-    if (!connection['socket'] || connection['socket'].destroyed) {
+    const state = connection.getConnectionState();
+    if (state.closed) {
       throw new Error('Connection is closed');
+    }
+    if (state.error) {
+      throw new Error('Connection is in error state');
     }
     return { connected: true };
   } catch (err) {

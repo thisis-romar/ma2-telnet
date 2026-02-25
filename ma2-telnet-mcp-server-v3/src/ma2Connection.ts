@@ -65,6 +65,9 @@ export class MA2Connection {
   private busy = false;
   private current: PendingCommand | null = null;
 
+  private isClosed = false;
+  private isError = false;
+
   constructor() {
     this.host = process.env.MA2_HOST || '127.0.0.1';
     this.port = parseInt(process.env.MA2_PORT || '30000', 10);
@@ -100,6 +103,7 @@ export class MA2Connection {
 
   /** Close the socket.  In-flight and queued commands are rejected. */
   close(): void {
+    this.isClosed = true;
     this.socket?.end();
     this.cleanupSocket();
   }
@@ -135,6 +139,7 @@ export class MA2Connection {
   }
 
   private handleSocketError(err: Error): void {
+    this.isError = true;
     if (this.loginReject) {
       const reject = this.loginReject;
       this.loginResolve = null;
@@ -147,6 +152,7 @@ export class MA2Connection {
   }
 
   private cleanupSocket(): void {
+    this.isClosed = true;
     if (this.socket) {
       this.socket.destroy();
       this.socket.removeAllListeners();
@@ -170,6 +176,10 @@ export class MA2Connection {
       pending.reject(new Error('Connection closed'));
     }
     this.queue = [];
+  }
+
+  getConnectionState(): { closed: boolean; error: boolean } {
+    return { closed: this.isClosed, error: this.isError };
   }
 
   private handleData(data: Buffer): void {
