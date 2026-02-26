@@ -45,6 +45,27 @@ The server handles the full telnet handshake — initial banner, dual-prompt seq
 | Node.js API       | Custom scripts via index.ts | Programmatic automation, batch ops         |
 | Direct telnet     | Raw telnet client            | Manual testing (not recommended for automation) |
 
+## Output Modes
+
+Both the MCP server and CLI support two output modes for all commands:
+
+- **Parsed**: Structured JSON output (default for List commands and batch tools)
+- **Raw**: Unprocessed telnet lines (including prompt, echo, and warnings)
+
+### Selecting Output Mode
+
+- **CLI**: Use the `--raw` flag or the `:raw` meta-command to toggle raw output.
+- **MCP server**: All tools return both `raw` and `parsed` fields in responses when available.
+
+#### Example
+
+```jsonc
+{
+  "raw": ["Executing : List World", "World 1 Full", ">"],
+  "parsed": { "type": "world", "items": [{...}] }
+}
+```
+
 ## Tools
 
 | Tool | Description |

@@ -82,6 +82,9 @@ export class MA2Connection {
    */
   async connect(): Promise<void> {
     if (this.socket) return;
+    // Reset state so we can reconnect after a previous disconnect.
+    this.isClosed = false;
+    this.isError = false;
     await this.openSocket();
     await new Promise<void>((resolve, reject) => {
       this.loginResolve = resolve;
@@ -205,19 +208,17 @@ export class MA2Connection {
       // auto-login-as-guest prompt, then an advisory "Please login!" message
       // followed by a second prompt.  Consume all prompts now and only act on
       // the last one, which represents the console's actual ready state.
-      let lastIndex = match.index;
-      let lastLen = match[0].length;
-      let searchFrom = lastIndex + lastLen;
+      //
+      // Note: this.buffer was already sliced past the first prompt at line 201,
+      // so search from position 0 in the current buffer for any additional prompts.
+      let searchFrom = 0;
       while (true) {
-        const sub = this.buffer.slice(searchFrom);
-        const m = PROMPT_RE.exec(sub);
+        const m = PROMPT_RE.exec(this.buffer.slice(searchFrom));
         if (!m) break;
-        lastIndex = searchFrom + m.index;
-        lastLen = m[0].length;
-        searchFrom = lastIndex + lastLen;
+        searchFrom += m.index + m[0].length;
       }
-      // Discard everything through the last prompt.
-      this.buffer = this.buffer.slice(lastIndex + lastLen);
+      // Discard everything through the last prompt found.
+      this.buffer = this.buffer.slice(searchFrom);
       this.phase = 'login';
       this.socket!.write(`login ${this.username} ${this.password}\r\n`);
       this.processBuffer();

@@ -1,0 +1,10 @@
+{
+  "tool": "ma2_exec_batch",
+  "args": {
+    "commands": [
+      "List Group",
+      "Assign Channel 111 At Dmx 1.001 /noconfirm",
+      "Import \"MyFixtureType.xml\""
+    ]
+  }
+}

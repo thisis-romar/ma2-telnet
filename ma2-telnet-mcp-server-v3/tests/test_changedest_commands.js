@@ -91,23 +91,12 @@ const testRawParsed = async () => {
 testRawParsed();
 
 /**
- * Output Mode Testing
+ * Output Modes Testing
+ *
+ * For output mode details, usage, and examples, see:
+ *   skills/ma2-output-modes/SKILL.md
  *
  * This script validates both parsed and raw output modes for ChangeDest/CD commands.
- *
- * Usage:
- * - Parsed output: Default mode, returns structured JSON for ChangeDest commands.
- * - Raw output: Set 'raw: true' in args or use CLI '--raw' flag/:raw meta-command.
- *
- * Example:
- *   Parsed: { tool: 'ma2_exec', args: { command: 'ChangeDest 1.1' } }
- *   Raw:    { tool: 'ma2_exec', args: { command: 'ChangeDest 1.1', raw: true } }
- *
- * Output:
- *   - Parsed: { parsed: { ... }, raw: [ ... ] }
- *   - Raw:    { raw: [ ... ] }
- *
- * See AGENTS.md and README.md for full documentation.
  */
 
 if (require.main === module) {

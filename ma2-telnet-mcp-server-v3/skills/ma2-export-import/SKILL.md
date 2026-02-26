@@ -40,19 +40,39 @@ Shortcut: Im
   Export UserProfile "Designer" /Overwrite
   SelectDrive 4 / Export Group 1 "groups" / SelectDrive 1   (USB workflow)
 
-## Import Examples
-  Import "mymacros.xml"                  (appends after last Macro ID)
-  Import "mymacros.xml" At Macro 20      (import at specific pool position)
-  Import "Front_groups.xml" At Group 50  (targeted placement)
-  SelectDrive 4 / Import "groups.xml" / SelectDrive 1   (from USB)
 
-## ⚠️ CRITICAL RESTRICTION: FixtureType Import
-  Importing FixtureTypes is ONLY allowed inside EditSetup context.
-  Attempting Import of FixtureType from normal command line will fail.
-  Correct sequence:
-    EditSetup                              (enter setup mode)
-    Import "generic@dimmer@00"             (fixture type import)
-    (exit setup via keyboard or command)
+## Automated Import Workflows
+
+### General Import (Macros, Groups, etc.)
+1. Ensure the file is in the correct importexport directory (see above).
+2. (Optional) Select the correct drive:
+  - `SelectDrive 1` (internal)
+  - `SelectDrive 4` (USB)
+3. Run the import command:
+  - `Import "filename.xml"` (appends to pool)
+  - `Import "filename.xml" At Macro 20` (import at specific pool position)
+
+### FixtureType Import (Automated Sequence)
+**FixtureType import requires EditSetup context.**
+
+1. Enter EditSetup:
+  - `EditSetup`
+2. Import the FixtureType:
+  - `Import "FixtureTypeFile.xml"`
+  - (Optionally) `Import "FixtureTypeFile.xml" At FixtureType 101`
+3. Exit EditSetup:
+  - `Exit`
+
+**Automated agents should always follow this sequence for FixtureType import.**
+
+#### Example Automation (FixtureType):
+```
+EditSetup
+Import "MyFixture.xml"
+Exit
+```
+
+## Objects Supported for Export/Import (confirmed)
 
 ## Objects Supported for Export/Import (confirmed)
   Groups, Presets, Sequences (with cues), Macros, Effects,
@@ -71,3 +91,87 @@ Shortcut: Im
   SelectDrive 1
   Export Macro 1 Thru 99 "nightly_macros_backup"
   SaveShow
+
+## Command Examples
+
+Reference commands attributed to this skill from the grandMA2 help documentation.
+
+### Export
+
+Export is a function keyword to transfer data from the show file to the libraries in the console.
+
+```
+Export /?
+Export Macro 1 Thru 10 "MyMacros"
+Export Effect 1
+```
+
+### Gel
+
+Another way is to type Gel or the shortcut Ge into the command line.
+
+```
+Export Gel 7
+```
+
+### Import
+
+Import is a function keyword to bring data from external .xml and .xmlp libraries into the show file.
+
+```
+Import /?
+Import "MyCoolEffect" Effect 101
+Import "MyMacro" At Macro 20 /path = "/data/ma/actual/gma2/importexport"
+```
+
+### Messages
+
+With the Messages keyword you can
+
+```
+Export Messages /cnd="(type >= 'warning' or time <= '12:45:00') and !(new = 'true')"
+```
+
+### Profile
+
+The Profile keyword is an object keyword to access DMX profiles and DMX profiles points. For more information, see DMX profiles.
+
+```
+Export Profile 1
+```
+
+### Root
+
+The Root keyword access the root in the object tree.
+
+```
+Export Root LiveSetup.Layers
+```
+
+### SelectDrive
+
+The SelectDrive keyword is a function keyword.
+
+```
+SelectDrive
+SelectDrive 2; LoadShow "demo dimmer and more"
+```
+
+### Export by using command line
+
+It is possible to use the Command Line to export all objects. For more information about the keyword and syntax, see the Export keyword topic.
+
+```
+Export Group 1  Thru 4 "Front_groups"
+Export UserProfile "Designer" /Overwrite
+SelectDrive 4
+export preset 4 "Cyan"
+```
+
+### Import by using command line
+
+It is possible to use the Command Line to import all objects. For more information about the keyword and syntax, see the Import keyword topic.
+
+```
+Import "Front Groups" At Group 20
+```

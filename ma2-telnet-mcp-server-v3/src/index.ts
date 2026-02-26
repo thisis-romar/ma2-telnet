@@ -20,12 +20,8 @@ const connection = new MA2Connection();
  * structured data.  Otherwise the raw lines are returned under
  * `lines`.
  */
-export async function exec(command: string): Promise<{ lines?: string[]; parsed?: ListParseResult }> {
-  const { raw, parsed } = await connection.sendCommand(command);
-  if (parsed) {
-    return { parsed };
-  }
-  return { lines: raw };
+export async function exec(command: string): Promise<{ raw: string[]; parsed?: ListParseResult }> {
+  return connection.sendCommand(command);
 }
 
 /**
@@ -34,16 +30,12 @@ export async function exec(command: string): Promise<{ lines?: string[]; parsed?
  * result includes either a `parsed` property (for `List` commands) or
  * a `lines` property with the raw output.
  */
-export async function execBatch(commands: string[]): Promise<Array<{ lines?: string[]; parsed?: ListParseResult; error?: string }>> {
-  const results: Array<{ lines?: string[]; parsed?: ListParseResult; error?: string }> = [];
+export async function execBatch(commands: string[]): Promise<Array<{ raw?: string[]; parsed?: ListParseResult; error?: string }>> {
+  const results: Array<{ raw?: string[]; parsed?: ListParseResult; error?: string }> = [];
   for (const cmd of commands) {
     try {
-      const { raw, parsed } = await connection.sendCommand(cmd);
-      if (parsed) {
-        results.push({ parsed });
-      } else {
-        results.push({ lines: raw });
-      }
+      const result = await connection.sendCommand(cmd);
+      results.push({ raw: result.raw, parsed: result.parsed });
     } catch (err) {
       results.push({ error: err instanceof Error ? err.message : String(err) });
     }
@@ -112,16 +104,13 @@ export { MA2_PREDEFINED_VARIABLES };
  * will be empty.  Errors from the console are propagated via
  * rejected promises.
  */
-export async function listObjects(type: MA2ObjectType, args?: string): Promise<ListParseResult> {
-  // Build the List command.  Avoid trailing whitespace when args is
-  // undefined or empty.
+export async function listObjects(type: MA2ObjectType, args?: string): Promise<{ raw: string[]; parsed: ListParseResult }> {
   const cmd = args && args.trim().length > 0 ? `List ${type} ${args}` : `List ${type}`;
-  const { parsed } = await exec(cmd);
-  // If parsing failed (e.g. because the command was not recognized), throw an error.
-  if (!parsed) {
+  const result = await exec(cmd);
+  if (!result.parsed) {
     throw new Error(`No parsed result for command: ${cmd}`);
   }
-  return parsed;
+  return { raw: result.raw, parsed: result.parsed };
 }
 
 export function close() {

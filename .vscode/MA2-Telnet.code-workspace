@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Downloads"
+		}
+	],
+	"settings": {
+		"powershell.cwd": "MA2-Telnet",
+		"chat.tools.terminal.autoApprove": {
+			"/^\\$env:MA2_HOST='127\\.0\\.0\\.1'; \\$env:MA2_PORT='30000'; \\$env:MA2_USERNAME='administrator'; \\$env:MA2_PASSWORD='admin'; node print_env\\.js$/": {
+				"approve": true,
+				"matchCommandLine": true
+			},
+			"/^cd ma2-telnet-mcp-server-v3 ; node extract_cmd_examples\\.js$/": {
+				"approve": true,
+				"matchCommandLine": true
+			},
+			"git add": true
+		}
+	}
+}

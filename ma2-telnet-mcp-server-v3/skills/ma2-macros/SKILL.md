@@ -61,3 +61,176 @@ Label Macro 10 "ShowStart"
 Outer quotes: double → inner must be single
   Assign Macro 1.5.1 /CMD="Label Macro 10 'ShowStart'"
 No nested quotes of same type — use variable substitution if needed.
+
+## Command Examples
+
+Reference commands attributed to this skill from the grandMA2 help documentation.
+
+### Macro
+
+The key Macro is located in the command area on the right of the key Page.
+
+```
+Macro
+Timecode
+Agenda
+Timer
+Plugin
+Macro 5
+Assign Macro 1.3.4 /wait="Go"
+Store Macro 2
+```
+
+### Function of the Command Line
+
+For more information on multiple functions of keys see Key overview.
+
+```
+Delete Group 4
+```
+
+### AddUserVar
+
+AddUserVar is a function used to change/extend content of user specific variables.
+
+```
+SetUserVar $myname = "John"
+AddUserVar $myname = " Doe"
+SetUserVar $mycounter = 5
+AddUserVar $mycounter = 6
+```
+
+### AddVar
+
+AddVar is a function keyword to change or extend content of show specific variables.
+
+```
+SetVar $myname = "John"
+AddVar $myname = " Doe"
+SetVar $mycounter = 5
+AddVar $mycounter = 6
+```
+
+### Appearance
+
+You can change the frame color of pool objects and the background color of cues with the Appearance keyword.
+
+```
+Appearance Macro 2 At Macro 13
+```
+
+### Call
+
+Call is a function used to apply/engage an object or its content (press 2x button "ON").
+
+```
+Call /?
+​Call Preset 3.1
+​Call Sequence 1
+​Call Cue 3
+Call Cue 3 /status
+```
+
+### Copy
+
+Copy is a function used to create copies of an object.
+
+```
+Copy Macro 2 At 6
+```
+
+### Dollar $ Character
+
+To get the $ character in the command line, press and hold Shift + 4.
+
+```
+SetVar $mychasers = "Executor 11 Thru 15"
+Off $mychasers
+SetVar $myname = "Ben Dover"
+Login $"myname"
+```
+
+### ListMacroLibrary
+
+The ListMacroLibrary is a function keyword to displays the .xml files in macro folder of the selected drive in the command line feedback window.
+
+```
+ListMacroLibrary "My*"
+```
+
+### ListPluginLibrary
+
+The ListPluginLibrary is a function keyword to displays the .xml files in the plugins folder of the selected drive in the command line feedback window.
+
+```
+ListPluginLibrary "My*"
+```
+
+### ListUserVar
+
+The ListUserVar keyword is a function keyword to get the user specific variables and their values in the Command Line Feedback window displayed.
+
+```
+ListUserVar
+ListUserVar f*
+```
+
+### ListVar
+
+The ListVar keyword is a function keyword to get the variables and their values in the Command Line Feedback window displayed.
+
+```
+ListVar
+ListVar f*
+```
+
+### RemoteCommand
+
+RemoteCommand is a function keyword.
+
+```
+RemoteCommand 192.168.0.4 "Macro 4"
+```
+
+### SetUserVar
+
+The SetUserVar keyword sets user profile specific variables. For more information, see Macros - Use Variables.
+
+```
+SetUserVar $CueNumber =
+```
+
+### SetVar
+
+The SetVar keyword sets global show variables. Every user profile can use these variables. For more information, see Macros - Use Variables.
+
+```
+SetVar $CueNumber =
+```
+
+### Use variables in macros
+
+It is possible to use variables in your macros and in any command line entry in the show.
+
+```
+SetVar $song_name = This is us
+SetVar $chorus_Chasers="Executor 201 + 204 + 205"
+Go $chorus_Chasers
+```
+
+### Command line interaction
+
+Command line interaction can mean two different things when we talk about macros - they are however connected.
+
+```
+Group 4 At
+```
+
+### Assign a macro to a
+
+Macros can be assigned to Executors, View buttons, and X-keys.
+
+```
+Assign Macro 1 At Exec 2.7
+Assign Macro 2 At ViewButton 1.5
+```

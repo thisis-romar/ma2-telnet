@@ -38,23 +38,12 @@ async function main() {
   await fs.writeFile(testPath, JSON.stringify(testResults, null, 2));
 
   /**
-   * Output Mode Testing
+   * Output Modes Testing
+   *
+   * For output mode details, usage, and examples, see:
+   *   skills/ma2-output-modes/SKILL.md
    *
    * This script validates both parsed and raw output modes for List commands.
-   *
-   * Usage:
-   * - Parsed output: Default mode, returns structured JSON for List commands.
-   * - Raw output: Set 'raw: true' in args or use CLI '--raw' flag/:raw meta-command.
-   *
-   * Example:
-   *   Parsed: { tool: 'ma2_exec', args: { command: 'list group' } }
-   *   Raw:    { tool: 'ma2_exec', args: { command: 'list group', raw: true } }
-   *
-   * Output:
-   *   - Parsed: { parsed: { ... }, raw: [ ... ] }
-   *   - Raw:    { raw: [ ... ] }
-   *
-   * See AGENTS.md and README.md for full documentation.
    */
   // Test both output modes for 'list group' command
   const testRawParsed = async () => {

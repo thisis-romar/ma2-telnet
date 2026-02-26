@@ -1,0 +1,1645 @@
+[
+  {
+    "command": ">>>",
+    "skill": "ma2-cues",
+    "context": ">>> [GoFastForward] Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Flash",
+    "skill": "ma2-cues",
+    "context": ">>> [GoFastForward] Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "ToFull",
+    "skill": "ma2-cues",
+    "context": ">>> [GoFastForward] Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "<<<",
+    "skill": "ma2-cues",
+    "context": "<<<  [GoFastBack] Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Black",
+    "skill": "ma2-cues",
+    "context": "<<<  [GoFastBack] Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "ToZero",
+    "skill": "ma2-cues",
+    "context": "<<<  [GoFastBack] Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": ".",
+    "skill": "ma2-commands",
+    "context": ". [Dot] Key",
+    "status": "skip",
+    "reason": "too short"
+  },
+  {
+    "command": "Default",
+    "skill": "ma2-commands",
+    "context": ". [Dot] Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Label",
+    "skill": "ma2-commands",
+    "context": "Assign Key",
+    "status": "fail",
+    "error": "Error #28: NO CUE SOURCE GIVEN"
+  },
+  {
+    "command": "Appearance",
+    "skill": "ma2-commands",
+    "context": "Assign Key",
+    "status": "fail",
+    "error": "Error #28: NO CUE SOURCE GIVEN"
+  },
+  {
+    "command": "At",
+    "skill": "ma2-commands",
+    "context": "At Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Stomp",
+    "skill": "ma2-commands",
+    "context": "At Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Extract",
+    "skill": "ma2-commands",
+    "context": "At Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Channel",
+    "skill": "ma2-commands",
+    "context": "Channel Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Dmx",
+    "skill": "ma2-commands",
+    "context": "Channel Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "DmxUniverse",
+    "skill": "ma2-commands",
+    "context": "Channel Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Copy",
+    "skill": "ma2-commands",
+    "context": "Copy Key",
+    "status": "fail",
+    "error": "Error #28: NO CUE SOURCE GIVEN"
+  },
+  {
+    "command": "Clone",
+    "skill": "ma2-cues",
+    "context": "Copy Key",
+    "status": "fail",
+    "error": "Error #28: NO CUE SOURCE GIVEN"
+  },
+  {
+    "command": "Cue",
+    "skill": "ma2-cues",
+    "context": "Cue Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Part",
+    "skill": "ma2-cues",
+    "context": "Cue Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Delete",
+    "skill": "ma2-commands",
+    "context": "Del (Delete) Key",
+    "status": "fail",
+    "error": "Error #28: NO CUE SOURCE GIVEN"
+  },
+  {
+    "command": "Remove",
+    "skill": "ma2-commands",
+    "context": "Del (Delete) Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Release",
+    "skill": "ma2-cues",
+    "context": "Del (Delete) Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Effect",
+    "skill": "ma2-effects",
+    "context": "Effect Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Form",
+    "skill": "ma2-effects",
+    "context": "Effect Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Executor",
+    "skill": "ma2-executors",
+    "context": "Exec (Executor) Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "SpecialMaster",
+    "skill": "ma2-executors",
+    "context": "Exec (Executor) Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Fix",
+    "skill": "ma2-commands",
+    "context": "Fix Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Fixture",
+    "skill": "ma2-commands",
+    "context": "Fixture Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Selection",
+    "skill": "ma2-cues",
+    "context": "Fixture Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "FixtureType",
+    "skill": "ma2-commands",
+    "context": "Fixture Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Go",
+    "skill": "ma2-cues",
+    "context": "Go + Key (small)",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Unpark",
+    "skill": "ma2-cues",
+    "context": "Go + Key (small)",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "GoBack",
+    "skill": "ma2-cues",
+    "context": "Go - Key (small)",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Goto",
+    "skill": "ma2-cues",
+    "context": "Goto Key",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "Load",
+    "skill": "ma2-cues",
+    "context": "Goto Key",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "LoadNext",
+    "skill": "ma2-cues",
+    "context": "Goto Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "LoadPrev",
+    "skill": "ma2-cues",
+    "context": "Goto Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Group",
+    "skill": "ma2-groups",
+    "context": "Group Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "World",
+    "skill": "ma2-groups",
+    "context": "Group Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Filter",
+    "skill": "ma2-groups",
+    "context": "Group Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Layout",
+    "skill": "ma2-groups",
+    "context": "Group Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "SearchResult",
+    "skill": "ma2-groups",
+    "context": "Group Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Mask",
+    "skill": "ma2-groups",
+    "context": "Group Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Help",
+    "skill": "ma2-commands",
+    "context": "Help Key",
+    "status": "pass",
+    "response": [
+      "..                  +                   -                   <<<                 >>>                 AddUserVar          AddVar              Agenda              Alert               Align               AlignFaderModules   All                 AllButtonExecutors  AllChaseExecutors   AllFaderExecutors   AllRows             AllSequExecutors    And                 Appearance          Assign              At                  Attribute           AutoCreate          Backup              Black               Blackout            BlackScreen         Blind               BlindEdit           Block               BP=ButtonPage       Call                Camera              CD=ChangeDest       Channel             CF=ChannelFader     ChannelLink         CP=ChannelPage      Chat                CC=CircularCopy     Clear               ClearActive         ClearAll            ClearSelection      Clone               CmdDelay            CmdHelp             CDIST=ContentDistributionCopy                CrashLogCopy        CrashLogDelete      CrashLogList        Crossfade           CrossfadeA          CrossfadeB          Cue                 Cut                 Default             DefGoBack           DefGoForward        DefGoPause          Delay               Delete              DeleteShow          DisableDMX          DS=DisconnectStationDmx                 DmxUniverse         DoubleRate          DoubleSpeed         DoView              Down                DropControl         Edit                Effect              EffectAttack        EffectBPM           EffectDecay         EffectDelay         EffectFade          EffectForm          EffectHigh          EffectHZ            EffectID            EffectLow           EffectPhase         EffectSec           EffectSpeedGroup    EffectWidth         Empty               EVC=EnableVideoCodecsEndIf               EndSession          ExecButton1         ExecButton2         ExecButton3         Executor            Exit                Export              Extract             Fade                FadePath            Fader               FP=FaderPage        FastOff             Feature             Filter              Fix                 Fixture             FT=FixtureType      Flash               FlashGo             FlashOn             Flip                Form                Freeze              Full                FullHighlight       Gel                 Go                  GoBack              Goto                Group               HalfRate            HalfSpeed           Help                Highlight           IDCue               IdentifyFaderModule IDExec              If                  IfActive            IfOutput            IfProg              Image               Import              ImportResource      IN=Info             Insert              Interleave          Invert              IS=InviteStation    Item3D              JS=JoinSession      Kill                Label               Language            Layer               Layout              LayoutSelection     Learn               LS=LeaveSession     List                ListCANFirmware     ListEffectLibrary   ListExecutors       ListFaderModules    ListLibrary         ListMacroLibrary    ListOops            ListOwner           ListPluginLibrary   ListShows           LU=ListUpdate       ListUserVar         ListVar             Load                LoadNext            LoadPrev            LoadShow            Locate              Lock                Login               Logout              LUA                 Macro               ManualReleaseXFadeDownManualReleaseXFadeUpManualXfade         ManualXFadeDown     ManualXFadeUp       Mask                Master              MasterFade          MAtricks            MB=MAtricksBlocks   MF=MAtricksFilter   MG=MAtricksGroups   MI=MAtricksInterleaveMR=MAtricksReset    MW=MAtricksWings    MediaServer         Menu                Message             Messages            MC=MidiControl      MN=MidiNote         MP=MidiProgram      Model               Move                Move3D              NI=NetworkInfo      NNI=NetworkNodeInfo NNU=NetworkNodeUpdateNST=NetworkSpeedTestNewShow             Next                NextRow             Normal              Off                 On                  Oops                Or                  OutDelay            OutFade             Page                Park                Part                Paste               Pause               Plugin              PMArea              Preset              PresetPool          PT=PresetType       Preview             PreviewEdit         PreviewExecutor     Previous            PrevRow             Profile             Programmer          Protocol            PSR                 PSRList             PSRPrepare          Rate                Rate1               RdmAutomatch        RdmAutopatch        RdmFixtureType      RdmInfo             RdmList             RdmSetParameter     RdmSetPatch         RdmUnmatch          Reboot              Record              Release             ReloadPlugins       Remote              RemoteCommand       Remove              RI=RemoveIndividualsReplace             ResetDmxSelection   ResetGuid           Restart             Root                Rotate3D            SaveShow            SaveShowGMA3        Screen              Search              SR=SearchResult     Select              SD=SelectDrive      Selection           SelFix              Sequence            SetHostname         SetIP               SNS=SetNetworkSpeed Setup               SetUserVar          SetVar              ShuffleSelection    ShuffleValues       Shutdown            SnapPercent         Solo                SM=SpecialMaster    Speed               StepInFade          StepOutFade         Stomp               Store               StoreLook           Surface             Swop                SwopGo              SwopOn              SyncEffects         TakeControl         Telnet              Temp                TempFader           Thru                TC=Timecode         TimecodeSlot        Timer               ToFull              Toggle              Tools               Top                 ToZero              UB=Unblock          UL=Unlock           Unpark              Up                  U=Update            UpdateFirmware      UpdateSoftware      UpdateThumbnails    User                UPR=UserProfile     Value               Version             View                VB=ViewButton       VP=ViewPage         VS=VpuScreenshot    Wakeup              With                World               XFadeDown           XFadeEnd            XFadeStart          XFadeStartTemp      Zero"
+    ]
+  },
+  {
+    "command": "CmdHelp",
+    "skill": "ma2-commands",
+    "context": "Help Key",
+    "status": "pass",
+    "response": [
+      "..                  +                   -                   <<<                 >>>                 AddUserVar          AddVar              Agenda              Alert               Align               AlignFaderModules   All                 AllButtonExecutors  AllChaseExecutors   AllFaderExecutors   AllRows             AllSequExecutors    And                 Appearance          Assign              At                  Attribute           AutoCreate          Backup              Black               Blackout            BlackScreen         Blind               BlindEdit           Block               BP=ButtonPage       Call                Camera              CD=ChangeDest       Channel             CF=ChannelFader     ChannelLink         CP=ChannelPage      Chat                CC=CircularCopy     Clear               ClearActive         ClearAll            ClearSelection      Clone               CmdDelay            CmdHelp             CDIST=ContentDistributionCopy                CrashLogCopy        CrashLogDelete      CrashLogList        Crossfade           CrossfadeA          CrossfadeB          Cue                 Cut                 Default             DefGoBack           DefGoForward        DefGoPause          Delay               Delete              DeleteShow          DisableDMX          DS=DisconnectStationDmx                 DmxUniverse         DoubleRate          DoubleSpeed         DoView              Down                DropControl         Edit                Effect              EffectAttack        EffectBPM           EffectDecay         EffectDelay         EffectFade          EffectForm          EffectHigh          EffectHZ            EffectID            EffectLow           EffectPhase         EffectSec           EffectSpeedGroup    EffectWidth         Empty               EVC=EnableVideoCodecsEndIf               EndSession          ExecButton1         ExecButton2         ExecButton3         Executor            Exit                Export              Extract             Fade                FadePath            Fader               FP=FaderPage        FastOff             Feature             Filter              Fix                 Fixture             FT=FixtureType      Flash               FlashGo             FlashOn             Flip                Form                Freeze              Full                FullHighlight       Gel                 Go                  GoBack              Goto                Group               HalfRate            HalfSpeed           Help                Highlight           IDCue               IdentifyFaderModule IDExec              If                  IfActive            IfOutput            IfProg              Image               Import              ImportResource      IN=Info             Insert              Interleave          Invert              IS=InviteStation    Item3D              JS=JoinSession      Kill                Label               Language            Layer               Layout              LayoutSelection     Learn               LS=LeaveSession     List                ListCANFirmware     ListEffectLibrary   ListExecutors       ListFaderModules    ListLibrary         ListMacroLibrary    ListOops            ListOwner           ListPluginLibrary   ListShows           LU=ListUpdate       ListUserVar         ListVar             Load                LoadNext            LoadPrev            LoadShow            Locate              Lock                Login               Logout              LUA                 Macro               ManualReleaseXFadeDownManualReleaseXFadeUpManualXfade         ManualXFadeDown     ManualXFadeUp       Mask                Master              MasterFade          MAtricks            MB=MAtricksBlocks   MF=MAtricksFilter   MG=MAtricksGroups   MI=MAtricksInterleaveMR=MAtricksReset    MW=MAtricksWings    MediaServer         Menu                Message             Messages            MC=MidiControl      MN=MidiNote         MP=MidiProgram      Model               Move                Move3D              NI=NetworkInfo      NNI=NetworkNodeInfo NNU=NetworkNodeUpdateNST=NetworkSpeedTestNewShow             Next                NextRow             Normal              Off                 On                  Oops                Or                  OutDelay            OutFade             Page                Park                Part                Paste               Pause               Plugin              PMArea              Preset              PresetPool          PT=PresetType       Preview             PreviewEdit         PreviewExecutor     Previous            PrevRow             Profile             Programmer          Protocol            PSR                 PSRList             PSRPrepare          Rate                Rate1               RdmAutomatch        RdmAutopatch        RdmFixtureType      RdmInfo             RdmList             RdmSetParameter     RdmSetPatch         RdmUnmatch          Reboot              Record              Release             ReloadPlugins       Remote              RemoteCommand       Remove              RI=RemoveIndividualsReplace             ResetDmxSelection   ResetGuid           Restart             Root                Rotate3D            SaveShow            SaveShowGMA3        Screen              Search              SR=SearchResult     Select              SD=SelectDrive      Selection           SelFix              Sequence            SetHostname         SetIP               SNS=SetNetworkSpeed Setup               SetUserVar          SetVar              ShuffleSelection    ShuffleValues       Shutdown            SnapPercent         Solo                SM=SpecialMaster    Speed               StepInFade          StepOutFade         Stomp               Store               StoreLook           Surface             Swop                SwopGo              SwopOn              SyncEffects         TakeControl         Telnet              Temp                TempFader           Thru                TC=Timecode         TimecodeSlot        Timer               ToFull              Toggle              Tools               Top                 ToZero              UB=Unblock          UL=Unlock           Unpark              Up                  U=Update            UpdateFirmware      UpdateSoftware      UpdateThumbnails    User                UPR=UserProfile     Value               Version             View                VB=ViewButton       VP=ViewPage         VS=VpuScreenshot    Wakeup              With                World               XFadeDown           XFadeEnd            XFadeStart          XFadeStartTemp      Zero"
+    ]
+  },
+  {
+    "command": "IfOutput",
+    "skill": "ma2-commands",
+    "context": "If Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "IfActive",
+    "skill": "ma2-commands",
+    "context": "If Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "IfProg",
+    "skill": "ma2-commands",
+    "context": "If Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "If",
+    "skill": "ma2-commands",
+    "context": "If Key",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "Store If Group 5 EndIf",
+    "skill": "ma2-groups",
+    "context": "If Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Learn",
+    "skill": "ma2-cues",
+    "context": "Learn Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Rate1",
+    "skill": "ma2-cues",
+    "context": "Learn Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "List",
+    "skill": "ma2-commands",
+    "context": "List Key",
+    "status": "pass",
+    "response": [
+      "Showfile              1  Date=Feb 25 2026 Info= (37)",
+      "TimeConfig            2  Hour=23 Minute=51 Second=12 Day=25 Month=2 Year=2026 Timezone=-4.00 Longitude=9.94 Latitude=49.79 RegardDaylightSaving=On StartDay=26 StartMonth=3 EndDay=29 EndMonth=10 ShiftForwardAt=2h ShiftBackwardAt=3h GPS=Off NTPServerIP=0.0.0.0",
+      "Settings              3  (6)"
+    ]
+  },
+  {
+    "command": "Macro",
+    "skill": "ma2-macros",
+    "context": "Macro Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Timecode",
+    "skill": "ma2-macros",
+    "context": "Macro Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Agenda",
+    "skill": "ma2-macros",
+    "context": "Macro Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Timer",
+    "skill": "ma2-macros",
+    "context": "Macro Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Plugin",
+    "skill": "ma2-macros",
+    "context": "Macro Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "-",
+    "skill": "ma2-commands",
+    "context": "[Minus] - Key",
+    "status": "skip",
+    "reason": "too short"
+  },
+  {
+    "command": "Move",
+    "skill": "ma2-commands",
+    "context": "Move Key",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "Replace",
+    "skill": "ma2-commands",
+    "context": "Move Key",
+    "status": "pass",
+    "response": [
+      "The Replace Objects operation showed 0 results:"
+    ]
+  },
+  {
+    "command": "Insert",
+    "skill": "ma2-commands",
+    "context": "Move Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Search",
+    "skill": "ma2-commands",
+    "context": "Move Key",
+    "status": "pass",
+    "response": [
+      "The Search Objects operation showed 0 results:"
+    ]
+  },
+  {
+    "command": "Off",
+    "skill": "ma2-cues",
+    "context": "Off Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "On",
+    "skill": "ma2-cues",
+    "context": "On Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Call",
+    "skill": "ma2-cues",
+    "context": "On Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Page",
+    "skill": "ma2-executors",
+    "context": "Page Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "ChannelPage",
+    "skill": "ma2-executors",
+    "context": "Page Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "FaderPage",
+    "skill": "ma2-executors",
+    "context": "Page Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "ButtonPage",
+    "skill": "ma2-executors",
+    "context": "Page Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Pause",
+    "skill": "ma2-cues",
+    "context": "Pause (small) Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Park",
+    "skill": "ma2-cues",
+    "context": "Pause (small) Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "+",
+    "skill": "ma2-commands",
+    "context": "[Plus] + Key",
+    "status": "skip",
+    "reason": "too short"
+  },
+  {
+    "command": "Preset",
+    "skill": "ma2-presets",
+    "context": "Preset Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Attribute",
+    "skill": "ma2-presets",
+    "context": "Preset Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Gel",
+    "skill": "ma2-presets",
+    "context": "Preset Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "PresetType",
+    "skill": "ma2-presets",
+    "context": "Preset Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Preview",
+    "skill": "ma2-cues",
+    "context": "Prvw (Preview) Key",
+    "status": "pass",
+    "response": [
+      "Programmer values were taken from \"Sequ 5,Cue 1\". Change values, then and press [Update] to update the values in that object. Press [ESC] to cancel."
+    ]
+  },
+  {
+    "command": "Select",
+    "skill": "ma2-commands",
+    "context": "Select Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "SelFix",
+    "skill": "ma2-commands",
+    "context": "Select Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Sequence",
+    "skill": "ma2-cues",
+    "context": "Sequ (Sequence) Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Store",
+    "skill": "ma2-commands",
+    "context": "Store Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Record",
+    "skill": "ma2-cues",
+    "context": "Store Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Temp",
+    "skill": "ma2-cues",
+    "context": "Temp Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Toggle",
+    "skill": "ma2-cues",
+    "context": "Temp Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Channel Thru",
+    "skill": "ma2-commands",
+    "context": "Thru Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Fixture Thru",
+    "skill": "ma2-commands",
+    "context": "Thru Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Fade",
+    "skill": "ma2-cues",
+    "context": "Time Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Delay",
+    "skill": "ma2-cues",
+    "context": "Time Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Store Fade",
+    "skill": "ma2-cues",
+    "context": "Time Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Store OutFade",
+    "skill": "ma2-cues",
+    "context": "Time Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Store Delay",
+    "skill": "ma2-cues",
+    "context": "Time Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Store OutDelay",
+    "skill": "ma2-cues",
+    "context": "Time Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Store SnapPercent",
+    "skill": "ma2-commands",
+    "context": "Time Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Store CmdDelay",
+    "skill": "ma2-cues",
+    "context": "Time Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Top",
+    "skill": "ma2-cues",
+    "context": "Top Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Kill",
+    "skill": "ma2-cues",
+    "context": "Top Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "View",
+    "skill": "ma2-commands",
+    "context": "View Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "ViewButton",
+    "skill": "ma2-cues",
+    "context": "View Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "ViewPage",
+    "skill": "ma2-executors",
+    "context": "View Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Screen",
+    "skill": "ma2-commands",
+    "context": "View Key",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Delete Group 4",
+    "testCommand": "Delete Group 900",
+    "skill": "ma2-macros",
+    "context": "Function of the Command Line",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Copy Cue 3 At Cue 5",
+    "skill": "ma2-cues",
+    "context": "Helping Keywords",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "Delete Effect 4 Thru 6",
+    "testCommand": "Delete Effect 900 Thru 6",
+    "skill": "ma2-effects",
+    "context": "Helping Keywords",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Store Fixture 3",
+    "skill": "ma2-commands",
+    "context": "Object Keywords",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "Delete Preset \"Red\"",
+    "skill": "ma2-presets",
+    "context": "Object Keywords",
+    "status": "fail",
+    "error": "Error #14: OBJECT DOES NOT EXIST"
+  },
+  {
+    "command": "Goto Cue 3",
+    "skill": "ma2-cues",
+    "context": "Function Keywords",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "Delete Preset \"Blue\"",
+    "skill": "ma2-cues",
+    "context": "Function Keywords",
+    "status": "fail",
+    "error": "Error #14: OBJECT DOES NOT EXIST"
+  },
+  {
+    "command": "<<< Executor 3",
+    "skill": "ma2-cues",
+    "context": "<<< [GoFastBack] keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": ">>> Executor 3",
+    "skill": "ma2-cues",
+    "context": ">>> [GoFastForward] keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "Group 5 - Channel 2",
+    "skill": "ma2-groups",
+    "context": "- [Minus] keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "At - 10",
+    "skill": "ma2-commands",
+    "context": "- [Minus] keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "- 5 Thru 7",
+    "skill": "ma2-commands",
+    "context": "- [Minus] keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Page -",
+    "skill": "ma2-executors",
+    "context": "- [Minus] keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Delete Cue 1 + 2",
+    "skill": "ma2-cues",
+    "context": "+ [Plus] keyword",
+    "status": "fail",
+    "error": "Error #14: OBJECT DOES NOT EXIST"
+  },
+  {
+    "command": "At + 5",
+    "skill": "ma2-commands",
+    "context": "+ [Plus] keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "+ 5 Thru 7",
+    "skill": "ma2-commands",
+    "context": "+ [Plus] keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "Page +",
+    "skill": "ma2-executors",
+    "context": "+ [Plus] keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "SetUserVar $myname = \"John\"",
+    "skill": "ma2-macros",
+    "context": "AddUserVar keyword",
+    "status": "fail",
+    "error": "Error #54: VARIABLE NOT FOUND"
+  },
+  {
+    "command": "AddUserVar $myname = \" Doe\"",
+    "skill": "ma2-macros",
+    "context": "AddUserVar keyword",
+    "status": "fail",
+    "error": "Error #54: VARIABLE NOT FOUND"
+  },
+  {
+    "command": "SetUserVar $mycounter = 5",
+    "skill": "ma2-macros",
+    "context": "AddUserVar keyword",
+    "status": "fail",
+    "error": "Error #54: VARIABLE NOT FOUND"
+  },
+  {
+    "command": "AddUserVar $mycounter = 6",
+    "skill": "ma2-macros",
+    "context": "AddUserVar keyword",
+    "status": "fail",
+    "error": "Error #54: VARIABLE NOT FOUND"
+  },
+  {
+    "command": "SetVar $myname = \"John\"",
+    "skill": "ma2-macros",
+    "context": "AddVar Keyword",
+    "status": "fail",
+    "error": "Error #54: VARIABLE NOT FOUND"
+  },
+  {
+    "command": "AddVar $myname = \" Doe\"",
+    "skill": "ma2-macros",
+    "context": "AddVar Keyword",
+    "status": "fail",
+    "error": "Error #54: VARIABLE NOT FOUND"
+  },
+  {
+    "command": "SetVar $mycounter = 5",
+    "skill": "ma2-macros",
+    "context": "AddVar Keyword",
+    "status": "fail",
+    "error": "Error #54: VARIABLE NOT FOUND"
+  },
+  {
+    "command": "AddVar $mycounter = 6",
+    "skill": "ma2-macros",
+    "context": "AddVar Keyword",
+    "status": "fail",
+    "error": "Error #54: VARIABLE NOT FOUND"
+  },
+  {
+    "command": "Agenda /?",
+    "skill": "ma2-commands",
+    "context": "Agenda Keyword",
+    "status": "pass",
+    "response": [
+      "Agenda options:",
+      "No Options found"
+    ]
+  },
+  {
+    "command": "Alert \"coffee break\"",
+    "skill": "ma2-cues",
+    "context": "Alert keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Align \"<\"",
+    "skill": "ma2-commands",
+    "context": "Align keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "Align 0",
+    "skill": "ma2-commands",
+    "context": "Align keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "AlignFaderModule",
+    "skill": "ma2-executors",
+    "context": "AlignFaderModules keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "All",
+    "skill": "ma2-commands",
+    "context": "All Keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Off AllButtonExecutors",
+    "skill": "ma2-executors",
+    "context": "AllButtonExecutors keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "Off AllChaseExecutors",
+    "skill": "ma2-executors",
+    "context": "AllChaseExecutors Keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "Off AllFaderExecutors",
+    "skill": "ma2-executors",
+    "context": "AllFaderExecutors Keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "AllRows",
+    "skill": "ma2-commands",
+    "context": "AllRows keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Off AllSequExecutors",
+    "skill": "ma2-executors",
+    "context": "AllSequExecutors Keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "Delete Cue 1 If Fixture 5 Attribute \"Pan\" And Fixture 5 Attribute \"Tilt\"",
+    "skill": "ma2-cues",
+    "context": "And keyword",
+    "status": "fail",
+    "error": "Error #14: OBJECT DOES NOT EXIST"
+  },
+  {
+    "command": "Appearance /?",
+    "skill": "ma2-commands",
+    "context": "Appearance keyword",
+    "status": "pass",
+    "response": [
+      "Appearance options:",
+      "/reset /r         Resets appearance.",
+      "/color            Sets color appearance."
+    ]
+  },
+  {
+    "command": "Appearance Preset 0.1 /h=0 /s=100 /br=50",
+    "skill": "ma2-presets",
+    "context": "Appearance keyword",
+    "status": "pass",
+    "response": [
+      "WARNING, NO OBJECTS FOUND FOR APPEARANCE"
+    ]
+  },
+  {
+    "command": "​Appearance Preset 0.1 /r=100 /g=0 /b=0",
+    "testCommand": "Appearance Preset 0.1 /r=100 /g=0 /b=0",
+    "skill": "ma2-presets",
+    "context": "Appearance keyword",
+    "status": "pass",
+    "response": [
+      "WARNING, NO OBJECTS FOUND FOR APPEARANCE"
+    ]
+  },
+  {
+    "command": "Appearance Macro 2 At Macro 13",
+    "skill": "ma2-macros",
+    "context": "Appearance keyword",
+    "status": "fail",
+    "error": "Error #52: OPERATION ABORTED BY USER"
+  },
+  {
+    "command": "Group Mac*",
+    "skill": "ma2-groups",
+    "context": "Asterisk *",
+    "status": "fail",
+    "error": "Error #14: OBJECT DOES NOT EXIST"
+  },
+  {
+    "command": "Fixture backt*blue",
+    "skill": "ma2-commands",
+    "context": "Asterisk *",
+    "status": "fail",
+    "error": "Error #14: OBJECT DOES NOT EXIST"
+  },
+  {
+    "command": "Assign /?",
+    "skill": "ma2-commands",
+    "context": "Assign keyword",
+    "status": "pass",
+    "response": [
+      "Assign options:",
+      "/break /b        Sets patch break.",
+      "/multipatch /m   Sets multi patch slot."
+    ]
+  },
+  {
+    "command": "​Assign Dmx 2.101 At Channel 5",
+    "testCommand": "Assign Dmx 2.101 At Channel 5",
+    "skill": "ma2-commands",
+    "context": "Assign keyword",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "​Assign Sequence 1 Thru 5 At Executor 6 Thru 10",
+    "testCommand": "Assign Sequence 1 Thru 5 At Executor 6 Thru 10",
+    "skill": "ma2-cues",
+    "context": "Assign keyword",
+    "status": "fail",
+    "error": "Error #14: OBJECT DOES NOT EXIST"
+  },
+  {
+    "command": "​Assign Toggle At Executor 101",
+    "testCommand": "Assign Toggle At Executor 101",
+    "skill": "ma2-executors",
+    "context": "Assign keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​Assign Fade 3 Cue 5",
+    "testCommand": "Assign Fade 3 Cue 5",
+    "skill": "ma2-cues",
+    "context": "Assign keyword",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "​Assign User JohnDoe /password=qwerty",
+    "testCommand": "Assign User JohnDoe /password=qwerty",
+    "skill": "ma2-commands",
+    "context": "Assign keyword",
+    "status": "fail",
+    "error": "Error #14: OBJECT DOES NOT EXIST"
+  },
+  {
+    "command": "​Assign Executor 1",
+    "testCommand": "Assign Executor 1",
+    "skill": "ma2-executors",
+    "context": "Assign keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Assign Group 1 Layout 1 /x=5 /y=2",
+    "skill": "ma2-groups",
+    "context": "Assign keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Assign Go ExecButton1 1.1 /cue_mode=xassert",
+    "skill": "ma2-executors",
+    "context": "Assign keyword",
+    "status": "fail",
+    "error": "Error #14: OBJECT DOES NOT EXIST"
+  },
+  {
+    "command": "At /?",
+    "skill": "ma2-commands",
+    "context": "At keyword",
+    "status": "pass",
+    "response": [
+      "At options:",
+      "/LAYER                        Sets destination layer.",
+      "=Value"
+    ]
+  },
+  {
+    "command": "​At 75",
+    "testCommand": "At 75",
+    "skill": "ma2-commands",
+    "context": "At keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​At Cue 3",
+    "testCommand": "At Cue 3",
+    "skill": "ma2-cues",
+    "context": "At keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Fixture 2 At Fixture 3",
+    "skill": "ma2-commands",
+    "context": "At keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Executor 3 At 50",
+    "skill": "ma2-executors",
+    "context": "At keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Attribute \"Pan\" At 20",
+    "skill": "ma2-commands",
+    "context": "At keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​PresetType 2 Thru 9 At Delay 2",
+    "testCommand": "PresetType 2 Thru 9 At Delay 2",
+    "skill": "ma2-presets",
+    "context": "At keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Copy Group 4 At 10",
+    "testCommand": "Copy Group 4 At 900",
+    "skill": "ma2-groups",
+    "context": "At keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​Off Attribute 1",
+    "testCommand": "Off Attribute 1",
+    "skill": "ma2-cues",
+    "context": "Attribute keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​Attribute \"pan\" At 120",
+    "testCommand": "Attribute \"pan\" At 120",
+    "skill": "ma2-commands",
+    "context": "Attribute keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Feature 3.1",
+    "skill": "ma2-commands",
+    "context": "Attribute keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Feature $feature.1 At + 1",
+    "skill": "ma2-commands",
+    "context": "Attribute keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​PresetType 3.2.1",
+    "testCommand": "PresetType 3.2.1",
+    "skill": "ma2-presets",
+    "context": "Attribute keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "AutoCreate /?",
+    "skill": "ma2-commands",
+    "context": "AutoCreate keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "AutoCreate FixtureType 2. \"PresetReferences\"",
+    "skill": "ma2-presets",
+    "context": "AutoCreate keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "Backup",
+    "skill": "ma2-backup",
+    "context": "Backup Keyword",
+    "status": "skip",
+    "reason": "destructive"
+  },
+  {
+    "command": "Black On Executor 1",
+    "skill": "ma2-cues",
+    "context": "Black keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Black Off Executor 1",
+    "skill": "ma2-cues",
+    "context": "Black keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Blackout On",
+    "skill": "ma2-cues",
+    "context": "Blackout keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "BlackScreen /?",
+    "skill": "ma2-cues",
+    "context": "BlackScreen keyword",
+    "status": "skip",
+    "reason": "destructive"
+  },
+  {
+    "command": "BlackScreen",
+    "skill": "ma2-cues",
+    "context": "BlackScreen keyword",
+    "status": "skip",
+    "reason": "destructive"
+  },
+  {
+    "command": "BlackScreen Off",
+    "skill": "ma2-cues",
+    "context": "BlackScreen keyword",
+    "status": "skip",
+    "reason": "destructive"
+  },
+  {
+    "command": "BlackScreen 1",
+    "skill": "ma2-cues",
+    "context": "BlackScreen keyword",
+    "status": "skip",
+    "reason": "destructive"
+  },
+  {
+    "command": "Blind On",
+    "skill": "ma2-cues",
+    "context": "Blind keyword",
+    "status": "pass",
+    "response": [
+      "Blind is on."
+    ]
+  },
+  {
+    "command": "​BlindEdit On",
+    "testCommand": "BlindEdit On",
+    "skill": "ma2-cues",
+    "context": "BlindEdit keyword",
+    "status": "pass",
+    "response": [
+      "Blind Edit is on."
+    ]
+  },
+  {
+    "command": "Block /?",
+    "skill": "ma2-commands",
+    "context": "Block keyword",
+    "status": "pass",
+    "response": [
+      "Block options:",
+      "/defaultvalues /dv    Removes default values.",
+      "/trackingshield /ts   Uses tracking shield."
+    ]
+  },
+  {
+    "command": "​Block",
+    "testCommand": "Block",
+    "skill": "ma2-commands",
+    "context": "Block keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​Block Cue 5 If Fixture 4 If Feature \"Position\"",
+    "testCommand": "Block Cue 5 If Fixture 4 If Feature \"Position\"",
+    "skill": "ma2-cues",
+    "context": "Block keyword",
+    "status": "pass",
+    "response": [
+      "WARNING, NO OBJECTS FOUND FOR BLOCK"
+    ]
+  },
+  {
+    "command": "​ButtonPage 5",
+    "testCommand": "ButtonPage 5",
+    "skill": "ma2-executors",
+    "context": "ButtonPage keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Call /?",
+    "skill": "ma2-macros",
+    "context": "Call keyword",
+    "status": "pass",
+    "response": [
+      "Call options:",
+      "/LAYER                  Sets destination layer.",
+      "/SCREEN                 Sets destination screen."
+    ]
+  },
+  {
+    "command": "​Call Preset 3.1",
+    "testCommand": "Call Preset 3.1",
+    "skill": "ma2-macros",
+    "context": "Call keyword",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "​Call Sequence 1",
+    "testCommand": "Call Sequence 1",
+    "skill": "ma2-macros",
+    "context": "Call keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​Call Cue 3",
+    "testCommand": "Call Cue 3",
+    "skill": "ma2-macros",
+    "context": "Call keyword",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "Call Cue 3 /status",
+    "skill": "ma2-macros",
+    "context": "Call keyword",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "Select Camera 1",
+    "skill": "ma2-commands",
+    "context": "Camera keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​Channel 34",
+    "testCommand": "Channel 34",
+    "skill": "ma2-commands",
+    "context": "Channel keyword",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "​Channel 11.5",
+    "testCommand": "Channel 11.5",
+    "skill": "ma2-commands",
+    "context": "Channel keyword",
+    "status": "fail",
+    "error": "Error #14: OBJECT DOES NOT EXIST"
+  },
+  {
+    "command": "​Channel 11",
+    "testCommand": "Channel 11",
+    "skill": "ma2-commands",
+    "context": "Channel keyword",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "​Assign Fixture 301 At ChannelFader 5",
+    "testCommand": "Assign Fixture 301 At ChannelFader 5",
+    "skill": "ma2-patch",
+    "context": "ChannelFader keyword",
+    "status": "fail",
+    "error": "Error #72: COMMAND NOT EXECUTED"
+  },
+  {
+    "command": "​Assign Channel 201 Thru 215 At ChannelFader 2.1",
+    "testCommand": "Assign Channel 201 Thru 215 At ChannelFader 2.1",
+    "skill": "ma2-patch",
+    "context": "ChannelFader keyword",
+    "status": "fail",
+    "error": "Error #14: OBJECT DOES NOT EXIST"
+  },
+  {
+    "command": "​Assign Fixture 3.2.1 At ChannelFader 2.11",
+    "testCommand": "Assign Fixture 3.2.1 At ChannelFader 2.11",
+    "skill": "ma2-patch",
+    "context": "ChannelFader keyword",
+    "status": "fail",
+    "error": "Error #14: OBJECT DOES NOT EXIST"
+  },
+  {
+    "command": "​ChannelLink",
+    "testCommand": "ChannelLink",
+    "skill": "ma2-patch",
+    "context": "ChannelLink keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​ChannelLink PresetType \"Position\"",
+    "testCommand": "ChannelLink PresetType \"Position\"",
+    "skill": "ma2-patch",
+    "context": "ChannelLink keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​ChannelLink Attribute \"Iris\" + \"Focus\"",
+    "testCommand": "ChannelLink Attribute \"Iris\" + \"Focus\"",
+    "skill": "ma2-patch",
+    "context": "ChannelLink keyword",
+    "status": "fail",
+    "error": "Error #14: OBJECT DOES NOT EXIST"
+  },
+  {
+    "command": "​ChannelPage 5",
+    "testCommand": "ChannelPage 5",
+    "skill": "ma2-patch",
+    "context": "ChannelPage keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​ChannelPage +",
+    "testCommand": "ChannelPage +",
+    "skill": "ma2-patch",
+    "context": "ChannelPage keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​Delete ChannelPage 2",
+    "testCommand": "Delete ChannelPage 2",
+    "skill": "ma2-patch",
+    "context": "ChannelPage keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Chat \"text\"",
+    "skill": "ma2-commands",
+    "context": "Chat keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​CircularCopy 1",
+    "testCommand": "CircularCopy 1",
+    "skill": "ma2-commands",
+    "context": "CircularCopy keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​CircularCopy -2",
+    "testCommand": "CircularCopy -2",
+    "skill": "ma2-commands",
+    "context": "CircularCopy keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​Clear",
+    "testCommand": "Clear",
+    "skill": "ma2-commands",
+    "context": "Clear keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "Clone /?",
+    "skill": "ma2-cues",
+    "context": "Clone keyword",
+    "status": "pass",
+    "response": [
+      "Clone options:",
+      "/overwrite /o                 Removes and replaces original data of the destination by new da",
+      "/merge /m                     Adds data to existing content."
+    ]
+  },
+  {
+    "command": "Clone Fixture 1 At Fixture 2",
+    "skill": "ma2-cues",
+    "context": "Clone keyword",
+    "status": "fail",
+    "error": "Error #47: CLONE SOURCE FIXTURE LIST EXPECTED"
+  },
+  {
+    "command": "Clone Fixture 1 + 2 At Group 10 If Sequence 1 Thru 10",
+    "skill": "ma2-cues",
+    "context": "Clone keyword",
+    "status": "fail",
+    "error": "Error #47: CLONE SOURCE FIXTURE LIST EXPECTED"
+  },
+  {
+    "command": "Clone Fixture 1 At Fixture 2 /merge",
+    "skill": "ma2-cues",
+    "context": "Clone keyword",
+    "status": "fail",
+    "error": "Error #47: CLONE SOURCE FIXTURE LIST EXPECTED"
+  },
+  {
+    "command": "​Clone Fixture 1 At Fixture 2 /overwrite",
+    "testCommand": "Clone Fixture 1 At Fixture 2 /overwrite",
+    "skill": "ma2-cues",
+    "context": "Clone keyword",
+    "status": "fail",
+    "error": "Error #47: CLONE SOURCE FIXTURE LIST EXPECTED"
+  },
+  {
+    "command": "Clone Fixture 1 At FixtureType 2",
+    "skill": "ma2-cues",
+    "context": "Clone keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "Clone Fixture 1 At FixtureType 2 /merge",
+    "skill": "ma2-cues",
+    "context": "Clone keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "Clone Fixture 1 At FixtureType 2 /overwrite",
+    "skill": "ma2-cues",
+    "context": "Clone keyword",
+    "status": "fail",
+    "error": "Error #14: OBJECT DOES NOT EXIST"
+  },
+  {
+    "command": "Clone FixtureType 1 At Fixture 2",
+    "skill": "ma2-cues",
+    "context": "Clone keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "Clone FixtureType 1 At Fixture 2 /merge",
+    "skill": "ma2-cues",
+    "context": "Clone keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "​Clone FixtureType 1 At Fixture 2 /overwrite",
+    "testCommand": "Clone FixtureType 1 At Fixture 2 /overwrite",
+    "skill": "ma2-cues",
+    "context": "Clone keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "Clone FixtureType 1 At FixtureType 2",
+    "skill": "ma2-cues",
+    "context": "Clone keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "Clone FixtureType 1 At FixtureType 2 /merge",
+    "skill": "ma2-cues",
+    "context": "Clone keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "​Clone FixtureType 1 At FixtureType 2 /overwrite",
+    "testCommand": "Clone FixtureType 1 At FixtureType 2 /overwrite",
+    "skill": "ma2-cues",
+    "context": "Clone keyword",
+    "status": "fail",
+    "error": "Error #1: UNKNOWN COMMAND"
+  },
+  {
+    "command": "​Store Cue 3 CmdDelay 4",
+    "testCommand": "Store Cue 3 CmdDelay 4",
+    "skill": "ma2-cues",
+    "context": "CmdDelay keyword",
+    "status": "pass",
+    "response": []
+  },
+  {
+    "command": "​CmdHelp f*",
+    "testCommand": "CmdHelp f*",
+    "skill": "ma2-commands",
+    "context": "CmdHelp keyword",
+    "status": "pass",
+    "response": [
+      "Fade                FadePath            Fader               FP=FaderPage        FastOff             Feature             Filter              Fix                 Fixture             FT=FixtureType      Flash               FlashGo             FlashOn             Flip                Form                Freeze              Full                FullHighlight"
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "ma2-telnet": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["ma2-telnet-mcp-server-v3/dist/server.js"],
+      "env": {
+        "MA2_HOST": "127.0.0.1",
+        "MA2_PORT": "30000",
+        "MA2_USERNAME": "administrator",
+        "MA2_PASSWORD": "admin"
+      }
+    }
+  }
+}
