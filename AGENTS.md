@@ -150,56 +150,77 @@ MA2> :exit
 
 ## grandMA2 Telnet Protocol (CRITICAL)
 
-PORT: 30000 (command access)  |  30001 (read-only System Monitor)
-ENABLE: Setup → Console → Global Settings → Telnet → Login Enabled
-CRLF: ALL commands MUST end with \r\n — console ignores \n-only
-LOGIN: Wait for SECOND prompt before sending: Login "username" "password"\r\n
-PROMPT DETECTION: Response complete when [Context]> received
-ANSI: Strip all ANSI escape codes from responses before parsing
-ECHO: Ignore "Executing : CommandName" first line in every response
-EMPTY LIST: WARNING, NO OBJECTS FOUND FOR LIST = empty result, not error
+- **PORT**: `30000` (command access), `30001` (read-only System Monitor)
+- **ENABLE**: Setup → Console → Global Settings → Telnet → Login Enabled
+- **CRLF**: ALL commands MUST end with `\r\n` — console ignores `\n`-only
+- **LOGIN**: Wait for SECOND prompt before sending:
+
+  ```text
+  Login "username" "password"\r\n
+  ```
+
+- **PROMPT DETECTION**: Response complete when `[Context]>` received
+- **ANSI**: Strip all ANSI escape codes from responses before parsing
+- **ECHO**: Ignore `Executing : CommandName` first line in every response
+- **EMPTY LIST**: `WARNING, NO OBJECTS FOUND FOR LIST` = empty result, not error
 
 ## Export / Import (CRITICAL — file operations)
 
-SYNTAX:  Export [Object-list] ["filename"] / [option]=[value]
-         Import "filename" [At Object] / [option]=[value]
-DRIVE:   SelectDrive 1 (internal) | SelectDrive 4 (USB stick 1)
-         Use SelectDrive before any Export/Import to/from USB
-PATH onPC: C:\ProgramData\MA Lighting Technologies\grandMA\gma2_V_3.x\importexport
-RESTRICTION: FixtureTypes can ONLY be imported inside EditSetup context
-EXAMPLES:
-  Export Group 1 Thru 4 "Front_groups"
-  Export Macro 1 Thru 10 "mymacros"
-  Import "mymacros.xml" At Macro 20
-  SelectDrive 4 / Export Sequence 1 "Main_seq" / SelectDrive 1
+**Syntax:**
+
+```text
+Export [Object-list] ["filename"] / [option]=[value]
+Import "filename" [At Object] / [option]=[value]
+```
+
+- **Drive selection**: `SelectDrive 1` (internal) or `SelectDrive 4` (USB stick 1) — run before any Export/Import to/from USB
+- **Path on onPC**: `C:\ProgramData\MA Lighting Technologies\grandMA\gma2_V_3.x\importexport`
+- **Restriction**: FixtureTypes can ONLY be imported inside EditSetup context
+
+**Examples:**
+
+```text
+Export Group 1 Thru 4 "Front_groups"
+Export Macro 1 Thru 10 "mymacros"
+Import "mymacros.xml" At Macro 20
+SelectDrive 4 / Export Sequence 1 "Main_seq" / SelectDrive 1
+```
 
 ## Macro Creation via Telnet (3-step pattern)
 
-⚠️  CRITICAL WARNING: Record Macro N Please enters hardware key-recording mode.
-Console waits for PHYSICAL key presses — NOT telnet stream input.
-Using Record Macro from a telnet agent session will:
-  - Execute and return an Executing: Record confirmation
-  - Leave the console in recording mode, unresponsive to telnet
-  - Require physical operator intervention to recover
+> **CRITICAL WARNING**: `Record Macro N Please` enters hardware key-recording mode.
+> Console waits for PHYSICAL key presses — NOT telnet stream input.
+> Using `Record Macro` from a telnet agent session will:
+>
+> - Execute and return an `Executing: Record` confirmation
+> - Leave the console in recording mode, unresponsive to telnet
+> - Require physical operator intervention to recover
 
 ALWAYS use the Store + Assign pattern for telnet macro creation:
-  Store Macro 1.[id]
-  Store Macro 1.[id].[line]
-  Assign Macro 1.[id].[line] /CMD="command text"
 
-CORRECT PATTERN (3 commands per macro line):
-  1. Store Macro 1.[id]                          (create pool object)
-  2. Store Macro 1.[id].[line]                   (create line slot)
-  3. Assign Macro 1.[id].[line] /CMD="command"   (set content)
-  4. Label Macro [id] "My Macro Name"            (optional label)
+```text
+Store Macro 1.[id]
+Store Macro 1.[id].[line]
+Assign Macro 1.[id].[line] /CMD="command text"
+```
 
-EXAMPLE — create Macro 5 with 2 lines:
-  Store Macro 1.5
-  Store Macro 1.5.1
-  Store Macro 1.5.2
-  Assign Macro 1.5.1 /CMD="Go Executor 1"
-  Assign Macro 1.5.2 /CMD="SaveShow"
-  Label Macro 5 "ShowStart"
+**Correct pattern** (3 commands per macro line):
+
+1. `Store Macro 1.[id]` — create pool object
+2. `Store Macro 1.[id].[line]` — create line slot
+3. `Assign Macro 1.[id].[line] /CMD="command"` — set content
+4. `Label Macro [id] "My Macro Name"` — optional label
+
+**Example** — create Macro 5 with 2 lines:
+
+```text
+Store Macro 1.5
+Store Macro 1.5.1
+Store Macro 1.5.2
+Assign Macro 1.5.1 /CMD="Go Executor 1"
+Assign Macro 1.5.2 /CMD="SaveShow"
+Label Macro 5 "ShowStart"
+```
 
 ## Environment Variables
 
