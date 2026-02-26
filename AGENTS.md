@@ -6,13 +6,42 @@ version: 1.1.0
 
 # ma2-telnet — Agent Instructions
 
+## Interface Options
+
+| Interface        | Usage                       | Features                                        |
+|------------------|-----------------------------|-------------------------------------------------|
+| MCP stdio server | Claude, Cursor, MCP agents  | Structured JSON commands, tool registration     |
+| CLI REPL         | `ma2-repl`, `npm run repl`  | Interactive command input, meta-commands         |
+| Node.js API      | Custom scripts via index.ts | Programmatic automation, batch ops              |
+| Direct telnet    | Raw telnet client           | Manual testing (not recommended for automation) |
+
 ## Build & Test
+
+```bash
 cd ma2-telnet-mcp-server-v3
 npm install          # installs zod + all deps
 npm run build        # tsc → dist/
 npm test             # runs tests/*.mjs
 npm run server       # start MCP server (stdio)
 npm run repl         # interactive CLI (port 30000)
+```
+
+## Output Modes
+
+Both the MCP server and CLI support two output modes for all commands:
+
+- **Parsed**: Structured JSON output (default for List commands)
+- **Raw**: Unprocessed telnet lines (including prompt, echo, and warnings)
+
+**CLI**: Append `--raw` to any command, or use the `:raw <command>` meta-command.
+**MCP server**: All tools return both `raw` and `parsed` fields in responses when available.
+
+```jsonc
+{
+  "raw": ["Executing : List World", "World 1 Full", ">"],
+  "parsed": { "type": "world", "header": ["No.", "Name", "Info"], "items": [{...}] }
+}
+```
 
 ## MCP stdio Server (JSON-RPC 2.0)
 
@@ -89,7 +118,38 @@ printf '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion
   | node dist/server.js 2>/dev/null
 ```
 
+## Interactive CLI
+
+```bash
+npm run repl
+# or
+ma2-repl
+```
+
+### Meta-Commands
+
+- `<MA2 command>` — Send command to console (append `--raw` for raw output)
+- `:status` — Show connection status
+- `:close` — Close connection
+- `:batch <cmds>` — Run multiple commands (comma separated)
+- `:list <type> [args] [--raw]` — List objects of type
+- `:raw <command>` — Send command and show raw telnet output
+- `:help` — Show help
+- `:exit` — Exit CLI
+
+### Example Session
+
+```text
+MA2> Fixture 1 thru
+MA2> :status
+MA2> :batch Version, List World
+MA2> :list fixture
+MA2> :raw List Group
+MA2> :exit
+```
+
 ## grandMA2 Telnet Protocol (CRITICAL)
+
 PORT: 30000 (command access)  |  30001 (read-only System Monitor)
 ENABLE: Setup → Console → Global Settings → Telnet → Login Enabled
 CRLF: ALL commands MUST end with \r\n — console ignores \n-only
@@ -100,6 +160,7 @@ ECHO: Ignore "Executing : CommandName" first line in every response
 EMPTY LIST: WARNING, NO OBJECTS FOUND FOR LIST = empty result, not error
 
 ## Export / Import (CRITICAL — file operations)
+
 SYNTAX:  Export [Object-list] ["filename"] / [option]=[value]
          Import "filename" [At Object] / [option]=[value]
 DRIVE:   SelectDrive 1 (internal) | SelectDrive 4 (USB stick 1)
@@ -141,10 +202,63 @@ EXAMPLE — create Macro 5 with 2 lines:
   Label Macro 5 "ShowStart"
 
 ## Environment Variables
+
 MA2_HOST / MA2_PORT (default 30000) / MA2_USERNAME / MA2_PASSWORD
 
+## Logging
+
+Set `MA2_LOG_LEVEL` to `info`, `debug`, or `error` for CLI logging control.
+Credentials and sensitive info are redacted in logs automatically.
+
+## Testing
+
+- `tests/test_all_commands.js` — Full command suite validation
+- `tests/test_list_commands.js` — List command parsing
+- `tests/test_changedest_commands.js` — ChangeDest command coverage
+- `print_env.js` — Verify environment variable configuration
+
+## Troubleshooting
+
+- Empty output → check env vars (`print_env.js`) and console reachability
+- Confirm grandMA2 console is running on the specified host/port
+- Review CLI logs (set `MA2_LOG_LEVEL=debug` for verbose output)
+
+## Packaging
+
+package.json exposes two binaries:
+
+- `ma2-mcp` → `dist/server.js` (MCP stdio server)
+- `ma2-repl` → `dist/cli.js` (interactive CLI)
+
+## Scripting (Node.js API)
+
+Import functions directly from `src/index.ts` for programmatic automation:
+
+```typescript
+import { exec, execBatch, status, listObjects, close } from './index.js';
+```
+
 ## Agent Skills (progressive disclosure)
-skills/ma2-connection/SKILL.md   ← START HERE for any connection work
-skills/ma2-commands/SKILL.md     ← START HERE for any command work
-skills/ma2-export-import/SKILL.md ← START HERE for export/import/macros
-skills/ma2-macros/SKILL.md       ← Full macro automation guide
+
+### Core (start here)
+
+- `skills/ma2-connection/SKILL.md` — Connection & session management
+- `skills/ma2-commands/SKILL.md` — Command syntax & keywords
+
+### Operations
+
+- `skills/ma2-cues/SKILL.md` — Cue management
+- `skills/ma2-executors/SKILL.md` — Executor control
+- `skills/ma2-macros/SKILL.md` — Macros & automation
+- `skills/ma2-effects/SKILL.md` — Effects programming
+- `skills/ma2-timecode/SKILL.md` — Timecode integration
+
+### Data & Configuration
+
+- `skills/ma2-groups/SKILL.md` — Group management
+- `skills/ma2-group-bulk/SKILL.md` — Bulk group operations
+- `skills/ma2-presets/SKILL.md` — Preset management
+- `skills/ma2-patch/SKILL.md` — DMX patching
+- `skills/ma2-export-import/SKILL.md` — Export/Import & file operations
+- `skills/ma2-backup/SKILL.md` — Backup operations
+- `skills/ma2-output-modes/SKILL.md` — Raw vs parsed output selection
