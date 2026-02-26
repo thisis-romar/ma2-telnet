@@ -1,25 +1,40 @@
----
-
 ## Sequential Workflow: Using the MCP Server via Terminal
-
 ### 1. Build the Project
 
-```bash
-npm install
-npm run build
-```
 
 ### 2. Start the MCP Server
 
-- For JSON payloads:
-  ```bash
-  npm run server
-  # or: node dist/server.js
-  ```
-- For interactive REPL:
-  ```bash
-  node dist/server.js --repl
-  ```
+```bash
+npm run server
+# or: node dist/server.js
+```
+
+### 2b. Run Tests
+
+```bash
+npm test
+```
+
+### 2c. Agent Context & Skills
+
+For full agent context, protocol quirks, and skill documentation, see AGENTS.md and the skills/ directory.
+
+### 2d. Directory Structure
+
+ma2-telnet-mcp-server-v3/
+├── dist/
+├── src/
+├── tests/
+├── skills/
+├── scripts/
+├── AGENTS.md
+├── package.json
+└── README.md
+
+### 2e. Macro & Export/Import Caveats
+
+⚠️  Record Macro via telnet opens hardware key-recording mode and cannot capture telnet commands. Use Store + Assign pattern for macros.
+⚠️  Export/Import: FixtureTypes can only be imported inside EditSetup context. See skills/ma2-export-import/SKILL.md for details.
 
 ### 3. Register the MCP Server (Claude Code)
 

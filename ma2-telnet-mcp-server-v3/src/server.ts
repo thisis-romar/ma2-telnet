@@ -23,7 +23,8 @@ server.registerTool(
   },
   async ({ command }) => {
     const result = await exec(command);
-    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+    // Always return both raw and parsed output
+    return { content: [{ type: 'text', text: JSON.stringify({ raw: result.raw, parsed: result.parsed }, null, 2) }] };
   }
 );
 
@@ -37,7 +38,8 @@ server.registerTool(
   },
   async ({ commands }) => {
     const results = await execBatch(commands);
-    return { content: [{ type: 'text', text: JSON.stringify(results, null, 2) }] };
+    // Always return both raw and parsed output for each command
+    return { content: [{ type: 'text', text: JSON.stringify(results.map(r => ({ raw: r.raw, parsed: r.parsed })), null, 2) }] };
   }
 );
 
@@ -71,44 +73,15 @@ server.registerTool(
   async ({ type, args }) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const result = await listObjects(type as any, args);
-    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+    // Always return both raw and parsed output
+    return { content: [{ type: 'text', text: JSON.stringify({ raw: result.raw, parsed: result.parsed }, null, 2) }] };
   }
 );
 
 
-async function startRepl() {
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-    prompt: 'MA2> '
-  });
-  rl.prompt();
-  rl.on('line', async (line) => {
-    const cmd = line.trim();
-    if (!cmd) {
-      rl.prompt();
-      return;
-    }
-    try {
-      const result = await exec(cmd);
-      process.stdout.write(JSON.stringify(result, null, 2) + '\n');
-    } catch (err) {
-      process.stderr.write(`Error: ${err instanceof Error ? err.message : String(err)}\n`);
-    }
-    rl.prompt();
-  });
-  rl.on('close', () => {
-    process.stdout.write('Exiting REPL.\n');
-    process.exit(0);
-  });
-}
-
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  if (process.argv.includes('--repl')) {
-    await startRepl();
-  }
 }
 
 main().catch((err) => {

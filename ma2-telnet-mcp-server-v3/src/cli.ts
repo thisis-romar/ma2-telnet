@@ -41,6 +41,8 @@ async function main() {
       return;
     }
     try {
+      let rawMode = false;
+      let command = cmd;
       if (cmd.startsWith(':')) {
         // Meta-commands
         if (cmd === ':help') {
@@ -49,7 +51,8 @@ async function main() {
           log('info', chalk.white('  :status              Show connection status'));
           log('info', chalk.white('  :close               Close connection'));
           log('info', chalk.white('  :batch <cmds>        Run multiple commands (comma separated)'));
-          log('info', chalk.white('  :list <type> [args]  List objects of type'));
+          log('info', chalk.white('  :list <type> [args] [--raw]  List objects of type, optionally show raw output'));
+          log('info', chalk.white('  :raw <MA2 command>   Send command and show raw telnet output'));
           log('info', chalk.white('  :exit                Exit CLI'));
         } else if (cmd === ':status') {
           const s = await status();
@@ -62,9 +65,24 @@ async function main() {
           const res = await execBatch(cmds);
           log('info', JSON.stringify(res, null, 2));
         } else if (cmd.startsWith(':list ')) {
-          const [type, ...args] = cmd.slice(6).split(' ');
-          const res = await listObjects(type as any, args.join(' '));
-          log('info', JSON.stringify(res, null, 2));
+          const parts = cmd.slice(6).split(' ');
+          const type = parts[0];
+          let args = parts.slice(1).join(' ');
+          if (args.includes('--raw')) {
+            rawMode = true;
+            args = args.replace('--raw', '').trim();
+          }
+          const res = await listObjects(type as any, args);
+          if (rawMode && res.raw) {
+            log('info', JSON.stringify(res.raw, null, 2));
+          } else {
+            log('info', JSON.stringify(res.parsed || res.raw, null, 2));
+          }
+        } else if (cmd.startsWith(':raw ')) {
+          command = cmd.slice(5);
+          rawMode = true;
+          const result = await exec(command);
+          log('info', JSON.stringify(result.raw, null, 2));
         } else if (cmd === ':exit') {
           rl.close();
         } else {
@@ -72,8 +90,16 @@ async function main() {
         }
       } else {
         // MA2 command
-        const result = await exec(cmd);
-        log('info', JSON.stringify(result, null, 2));
+        if (cmd.endsWith('--raw')) {
+          rawMode = true;
+          command = cmd.replace('--raw', '').trim();
+        }
+        const result = await exec(command);
+        if (rawMode && result.raw) {
+          log('info', JSON.stringify(result.raw, null, 2));
+        } else {
+          log('info', JSON.stringify(result.parsed || result.raw, null, 2));
+        }
       }
     } catch (err) {
       log('error', chalk.red(err instanceof Error ? err.message : String(err)));

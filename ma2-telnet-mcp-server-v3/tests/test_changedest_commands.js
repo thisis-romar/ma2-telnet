@@ -55,6 +55,61 @@ async function main() {
   console.log(`Total ChangeDest/CD commands: ${cdCmds.length}`);
 }
 
+// Test both output modes for 'ChangeDest' command
+const testRawParsed = async () => {
+  const { spawn } = require('child_process');
+
+  // Test parsed output (default)
+  const procParsed = spawn('node', ['ma2-telnet-mcp-server-v3/dist/server.js'], {
+    stdio: ['pipe', 'pipe', 'inherit']
+  });
+  procParsed.stdout.on('data', (data) => {
+    console.log('Parsed output:', data.toString());
+  });
+  const parsedRequest = JSON.stringify({ tool: 'ma2_exec', args: { command: 'ChangeDest 1.1' } }) + '\n';
+  procParsed.stdin.write(parsedRequest);
+  setTimeout(() => {
+    procParsed.stdin.end();
+    procParsed.kill();
+  }, 2000);
+
+  // Test raw output (explicit)
+  const procRaw = spawn('node', ['ma2-telnet-mcp-server-v3/dist/server.js'], {
+    stdio: ['pipe', 'pipe', 'inherit']
+  });
+  procRaw.stdout.on('data', (data) => {
+    console.log('Raw output:', data.toString());
+  });
+  const rawRequest = JSON.stringify({ tool: 'ma2_exec', args: { command: 'ChangeDest 1.1', raw: true } }) + '\n';
+  procRaw.stdin.write(rawRequest);
+  setTimeout(() => {
+    procRaw.stdin.end();
+    procRaw.kill();
+  }, 2000);
+};
+
+testRawParsed();
+
+/**
+ * Output Mode Testing
+ *
+ * This script validates both parsed and raw output modes for ChangeDest/CD commands.
+ *
+ * Usage:
+ * - Parsed output: Default mode, returns structured JSON for ChangeDest commands.
+ * - Raw output: Set 'raw: true' in args or use CLI '--raw' flag/:raw meta-command.
+ *
+ * Example:
+ *   Parsed: { tool: 'ma2_exec', args: { command: 'ChangeDest 1.1' } }
+ *   Raw:    { tool: 'ma2_exec', args: { command: 'ChangeDest 1.1', raw: true } }
+ *
+ * Output:
+ *   - Parsed: { parsed: { ... }, raw: [ ... ] }
+ *   - Raw:    { raw: [ ... ] }
+ *
+ * See AGENTS.md and README.md for full documentation.
+ */
+
 if (require.main === module) {
   main();
 }

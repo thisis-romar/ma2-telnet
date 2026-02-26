@@ -8,7 +8,8 @@
     "command": "Flash",
     "context": ">>> [GoFastForward] Key",
     "url": "https://help.malighting.com/grandMA2/en/help/key_key_skipplus.html",
-    },
+    "description": "Flip"
+  },
   {
     "command": "ToFull",
     "context": ">>> [GoFastForward] Key",
@@ -41,13 +42,13 @@
     "command": "Default",
     "context": ". [Dot] Key",
     "url": "https://help.malighting.com/grandMA2/en/help/key_key_dot.html"
-    },
-    {
-      "command": "Default",
-      "context": ". [Dot] Key",
-      "url": "https://help.malighting.com/grandMA2/en/help/key_key_dot.html",
-      "description": "DefGoBack"
-    },
+  {
+    "command": "Default",
+    "context": ". [Dot] Key",
+    "url": "https://help.malighting.com/grandMA2/en/help/key_key_dot.html",
+    "description": "DefGoBack"
+  },
+  },
   {
     "command": "Label",
     "context": "Assign Key",
