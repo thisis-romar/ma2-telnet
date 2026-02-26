@@ -263,23 +263,23 @@ import { exec, execBatch, status, listObjects, close } from './index.js';
 
 ### Core (start here)
 
-- `skills/ma2-connection/SKILL.md` — Connection & session management
-- `skills/ma2-commands/SKILL.md` — Command syntax & keywords
+- [`skills/ma2-connection/SKILL.md`](ma2-telnet-mcp-server-v3/skills/ma2-connection/SKILL.md) — Connection & session management
+- [`skills/ma2-commands/SKILL.md`](ma2-telnet-mcp-server-v3/skills/ma2-commands/SKILL.md) — Command syntax & keywords
 
 ### Operations
 
-- `skills/ma2-cues/SKILL.md` — Cue management
-- `skills/ma2-executors/SKILL.md` — Executor control
-- `skills/ma2-macros/SKILL.md` — Macros & automation
-- `skills/ma2-effects/SKILL.md` — Effects programming
-- `skills/ma2-timecode/SKILL.md` — Timecode integration
+- [`skills/ma2-cues/SKILL.md`](ma2-telnet-mcp-server-v3/skills/ma2-cues/SKILL.md) — Cue management
+- [`skills/ma2-executors/SKILL.md`](ma2-telnet-mcp-server-v3/skills/ma2-executors/SKILL.md) — Executor control
+- [`skills/ma2-macros/SKILL.md`](ma2-telnet-mcp-server-v3/skills/ma2-macros/SKILL.md) — Macros & automation
+- [`skills/ma2-effects/SKILL.md`](ma2-telnet-mcp-server-v3/skills/ma2-effects/SKILL.md) — Effects programming
+- [`skills/ma2-timecode/SKILL.md`](ma2-telnet-mcp-server-v3/skills/ma2-timecode/SKILL.md) — Timecode integration
 
 ### Data & Configuration
 
-- `skills/ma2-groups/SKILL.md` — Group management
-- `skills/ma2-group-bulk/SKILL.md` — Bulk group operations
-- `skills/ma2-presets/SKILL.md` — Preset management
-- `skills/ma2-patch/SKILL.md` — DMX patching
-- `skills/ma2-export-import/SKILL.md` — Export/Import & file operations
-- `skills/ma2-backup/SKILL.md` — Backup operations
-- `skills/ma2-output-modes/SKILL.md` — Raw vs parsed output selection
+- [`skills/ma2-groups/SKILL.md`](ma2-telnet-mcp-server-v3/skills/ma2-groups/SKILL.md) — Group management
+- [`skills/ma2-group-bulk/SKILL.md`](ma2-telnet-mcp-server-v3/skills/ma2-group-bulk/SKILL.md) — Bulk group operations
+- [`skills/ma2-presets/SKILL.md`](ma2-telnet-mcp-server-v3/skills/ma2-presets/SKILL.md) — Preset management
+- [`skills/ma2-patch/SKILL.md`](ma2-telnet-mcp-server-v3/skills/ma2-patch/SKILL.md) — DMX patching
+- [`skills/ma2-export-import/SKILL.md`](ma2-telnet-mcp-server-v3/skills/ma2-export-import/SKILL.md) — Export/Import & file operations
+- [`skills/ma2-backup/SKILL.md`](ma2-telnet-mcp-server-v3/skills/ma2-backup/SKILL.md) — Backup operations
+- [`skills/ma2-output-modes/SKILL.md`](ma2-telnet-mcp-server-v3/skills/ma2-output-modes/SKILL.md) — Raw vs parsed output selection
